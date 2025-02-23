@@ -1,0 +1,13 @@
+@import "tailwindcss";
+@import "./fonts.css";
+
+@theme {
+  --color-black: #000000;       /* Negro */
+  --color-gray-dark: #1E1E1E;   /* Plomo */
+  --color-gray-3: #888888;      /* Gris 3 */
+  --color-gray-2: #D9D9D9;      /* Gris 2 */
+  --color-gray-1: #E9EAEF;      /* Gris 1 */
+  --color-white: #FFFFFF;       /* Blanco */
+  --color-red: #E42521;         /* Rojo */
+  --color-blue: #242F5F;        /* Azul */
+}
