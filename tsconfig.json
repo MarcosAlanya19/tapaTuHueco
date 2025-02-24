@@ -4,16 +4,18 @@
     "strictNullChecks": true,
     "baseUrl": ".",
     "paths": {
-      "@*": [
-        "src/*"
-      ]
+      "@*": ["src/*"]
     },
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "moduleResolution": "bundler"
   },
   "include": [
     ".astro/types.d.ts",
-    "**/*"
+    "src",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.astro"
   ],
-  "exclude": [
-    "dist"
-  ]
+  "exclude": ["dist", "node_modules"]
 }
