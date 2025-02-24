@@ -1,22 +1,32 @@
 ---
-import Text from "./Text.astro";
+import Text from "./ui/Text.astro";
 ---
 
 <section class="grid items-center justify-items-center p-16 h-screen">
     <div class="bg-red rounded-3xl p-16 grid grid-cols-[2fr_2.5fr] gap-8 max-w-6xl">
         <div class="space-y-4">
-            <Text font="LeagueSpartan" weight="semiBold" size="44px"
-                  color="white"
-                  className="leading-tight"
-                  text="Creemos que cada ciudadano tiene el derecho a vivir en una ciudad segura y limpia"
+            <Text
+                    as="h1"
+                    className="leading-tight"
+                    color="white"
+                    font="LeagueSpartan"
+                    size="44px"
+                    text="Creemos que cada ciudadano tiene el derecho a vivir en una ciudad segura y limpia"
+                    weight="semiBold"
             />
-            <Text size="22px" weight="light"
-                  color="white"
-                  text="Nuestra misión es empoderar a la comunidad para que sea agente de cambio y transforme su entorno."
+            <Text
+                    color="white"
+                    size="22px"
+                    text="Nuestra misión es empoderar a la comunidad para que sea agente de cambio y transforme su entorno."
+                    weight="light"
             />
         </div>
         <div class="flex items-center justify-center">
-            <img src="/img/UsAnimate.png" class="max-w-full h-auto" alt="usAnimate" />
+            <img
+                    alt="usAnimate"
+                    class="max-w-full h-auto"
+                    src="/img/UsAnimate.png"
+            />
         </div>
     </div>
 </section>

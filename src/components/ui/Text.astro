@@ -1,7 +1,6 @@
 ---
-import '../styles/global.css';
-
 interface Props {
+	as?: keyof HTMLElementTagNameMap;
 	color?: 'black' | 'gray-dark' | 'gray-3' | 'gray-2' | 'gray-1' | 'white' | 'red' | 'blue';
 	font?: 'Fredoka' | 'LeagueSpartan';
 	size?: string;
@@ -10,7 +9,15 @@ interface Props {
 	text: string;
 }
 
-const {color = 'black', font = 'Fredoka', size = '16px', weight = 'regular', className = '', text} = Astro.props;
+const {
+	as = 'p',
+	color = 'black',
+	font = 'Fredoka',
+	size = '16px',
+	weight = 'regular',
+	className = '',
+	text
+} = Astro.props;
 
 const fontWeightMap: Record<string, string> = {
 	light: "300",
@@ -32,7 +39,8 @@ const colorMap: Record<string, string> = {
 };
 ---
 
-<p class={className}
-   style={`color: ${colorMap[color]}; font-size: ${size}; font-weight: ${fontWeightMap[weight]}; font-family: ${font}, sans-serif;`}>
-	{text}
-</p>
+<div
+        class={`inline-block ${className}`}
+        style={`color: ${colorMap[color]}; font-size: ${size}; font-weight: ${fontWeightMap[weight]}; font-family: ${font}, sans-serif;`}
+        set:html={`<${as}>${text}</${as}>`}
+/>
