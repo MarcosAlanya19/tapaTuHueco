@@ -1,0 +1,56 @@
+---
+import Text from "./ui/Text.astro";
+---
+
+<header
+  class="fixed inset-x-0 top-0 z-50 flex w-full flex-wrap text-sm md:flex-nowrap md:justify-start px-10 pt-5 backdrop-blur-md bg-gradient-to-b from-white/70 to-transparent"
+>
+    <nav
+      class="h-16 bg-white w-full rounded-[32.5px] flex justify-between items-center pl-10 pr-2.5 shadow-lg"
+    >
+        <div class="flex gap-6">
+            <Text
+              as="p"
+              color="red"
+              className="cursor-pointer"
+              font="Fredoka"
+              size="18px"
+              text="Inicio"
+              weight="regular"
+            />
+            
+            <Text
+              as="p"
+              color="red"
+              className="cursor-pointer"
+              font="Fredoka"
+              size="18px"
+              text="Nosotros"
+              weight="regular"
+            />
+            
+            <Text
+              as="p"
+              color="red"
+              className="cursor-pointer"
+              font="Fredoka"
+              size="18px"
+              text="Mapa"
+              weight="regular"
+            />
+        </div>
+        
+        <div class="mt-5 flex flex-col gap-y-4 md:mt-0 md:flex-row md:items-center md:justify-end md:gap-x-4 lg:gap-x-7 md:ps-7">
+            <button class="bg-red h-[49px] w-[170px] rounded-[24.5px]">
+                <Text
+                  as="p"
+                  color="white"
+                  font="Fredoka"
+                  size="16px"
+                  text="Descarga ahora"
+                  weight="medium"
+                />
+            </button>
+        </div>
+    </nav>
+</header>
