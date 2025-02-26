@@ -1,0 +1,83 @@
+---
+import Text from "./ui/Text.astro";
+---
+
+<section
+        class="relative grid grid-cols-[1.7fr_1.2fr] bg-gray-1 h-[115vh] w-full overflow-hidden"
+        style="clip-path: ellipse(110% 100% at 50% 0%);"
+>
+    <div
+            class="pl-10 h-full bg-[url(/img/BgLogo.png)] -top-[77px] -left-[86px] bg-cover bg-no-repeat bg-right-top flex justify-center relative"
+    >
+        <div
+                class="absolute top-1/2 left-[42%] transform -translate-x-1/2 -translate-y-1/2 flex flex-col text-center gap-6 items-center justify-center max-w-[44rem]"
+        >
+            <Text
+                    as="h1"
+                    className="leading-tight md:leading-[60.5px]"
+                    color="gray-3"
+                    font="Fredoka"
+                    size="3.125rem"
+                    weight="regular"
+            >
+                ¿Cansado de esquivar
+                <Text
+                        as="span"
+                        color="red"
+                        size="3.125rem"
+                        weight="medium"
+                >baches
+                </Text>
+                en cada esquina?
+            </Text>
+
+            <Text
+                    as="p"
+                    color="gray-dark"
+                    font="LeagueSpartan"
+                    size="1.563rem"
+                    weight="light"
+            >
+                Más que una app,
+                <Text
+                        as="span"
+                        color="red"
+                        size="1.563rem"
+                        weight="light"
+                >Tapa tu hueco
+                </Text>
+                es un movimiento ciudadano que busca mejorar la calidad de vida de todos.
+            </Text>
+
+            <div
+                    class="flex"
+            >
+                <button
+                        class="bg-red rounded-full w-[220px] h-[55px] flex items-center
+                        justify-center cursor-pointer transition duration-300 hover:scale-105
+                        hover:bg-red-dark hover:shadow-lg focus:ring focus:ring-red-300"
+                >
+                    <Text
+                            as="p"
+                            color="white"
+                            font="Fredoka"
+                            size="18px"
+                            weight="medium"
+                    >
+                        Empezar ahora
+                    </Text>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div
+            class="pr-10 relative flex items-end justify-center h-full"
+    >
+        <img
+                alt="HandSmartPhone"
+                class="w-auto object-cover h-[90%]"
+                src="/img/HandSmartPhone.png"
+        >
+    </div>
+</section>
