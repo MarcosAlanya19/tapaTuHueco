@@ -1,12 +1,16 @@
 ---
+import DonwloadApp from '../components/DonwloadApp.astro';
+import Functions from '../components/Functions.astro';
+import Header from '../components/Header.astro';
 import Us from '../components/Us.astro';
-import DonwloadApp from '../components/DonwloadApp.astro'
-import Functions from '../components/Functions.astro'
 import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro'
 ---
 
 <Layout>
-    <Us/>
-    <Functions />
-    <DonwloadApp/>
+  <Navbar/>
+  <Header />
+  <Us />
+  <Functions />
+  <DonwloadApp />
 </Layout>

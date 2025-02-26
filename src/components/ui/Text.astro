@@ -6,7 +6,7 @@ interface Props {
 	size?: string;
 	weight?: "light" | 'regular' | "medium" | 'semiBold' | 'bold';
 	className?: string;
-	text: string;
+	text?: string;
 }
 
 const {
@@ -17,30 +17,52 @@ const {
 	weight = 'regular',
 	className = '',
 	text
-} = Astro.props;
+} = Astro.props as Props;
 
 const fontWeightMap: Record<string, string> = {
-	light: "300",
-	regular: '400',
-	medium: '500',
-	semiBold: "600",
-	bold: '700',
+  light: '300',
+  regular: '400',
+  medium: '500',
+  semiBold: '600',
+  bold: '700',
 };
 
 const colorMap: Record<string, string> = {
-	black: 'var(--color-black)',
-	'gray-dark': 'var(--color-gray-dark)',
-	'gray-3': 'var(--color-gray-3)',
-	'gray-2': 'var(--color-gray-2)',
-	'gray-1': 'var(--color-gray-1)',
-	white: 'var(--color-white)',
-	red: 'var(--color-red)',
-	blue: 'var(--color-blue)',
+  black: 'var(--color-black)',
+  'gray-dark': 'var(--color-gray-dark)',
+  'gray-3': 'var(--color-gray-3)',
+  'gray-2': 'var(--color-gray-2)',
+  'gray-1': 'var(--color-gray-1)',
+  white: 'var(--color-white)',
+  red: 'var(--color-red)',
+  blue: 'var(--color-blue)',
 };
+
+const style = `color: ${colorMap[color]}; font-size: ${size}; font-weight: ${fontWeightMap[weight]}; font-family: ${font}, sans-serif;`;
+const classStyle = `inline-block z-5 ${className}`;
 ---
 
-<div
-        class={`inline-block ${className}`}
-        style={`color: ${colorMap[color]}; font-size: ${size}; font-weight: ${fontWeightMap[weight]}; font-family: ${font}, sans-serif;`}
-        set:html={`<${as}>${text}</${as}>`}
-/>
+{as === 'p' &&
+  <p
+    class={classStyle}
+    style={style}
+  >
+      {text || <slot />}
+  </p>
+}
+{as === 'span' &&
+  <span
+    class={classStyle}
+    style={style}
+    >
+      {text || <slot />}
+  </span>
+}
+{as === 'h1' &&
+  <h1
+    class={classStyle}
+    style={style}
+  >
+    {text || <slot />}
+  </h1>
+}
