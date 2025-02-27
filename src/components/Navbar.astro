@@ -1,9 +1,10 @@
 ---
 import Text from "./ui/Text.astro";
+import Logo from "./ui/Logo.astro";
 ---
 
 <header
-  class="fixed inset-x-0 top-0 z-50 flex w-full flex-wrap text-sm md:flex-nowrap md:justify-start px-10 pt-5 backdrop-blur-md bg-gradient-to-b from-white/70 to-transparent"
+  class="fixed inset-x-0 top-0 z-50 flex w-full flex-wrap text-sm md:flex-nowrap md:justify-start px-10 pt-5 pb-5 backdrop-blur-md bg-gradient-to-b from-white/70 to-transparent"
 >
     <nav
       class="h-16 bg-white w-full rounded-[32.5px] flex justify-between items-center pl-10 pr-2.5 shadow-lg"
@@ -39,6 +40,8 @@ import Text from "./ui/Text.astro";
               weight="regular"
             />
         </div>
+        
+        <Logo width="100" height="100" />
         
         <div class="mt-5 flex flex-col gap-y-4 md:mt-0 md:flex-row md:items-center md:justify-end md:gap-x-4 lg:gap-x-7 md:ps-7">
             <button class="bg-red h-[49px] w-[170px] rounded-[24.5px]">

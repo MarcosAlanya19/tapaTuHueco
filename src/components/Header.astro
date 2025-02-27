@@ -3,15 +3,31 @@ import Text from "./ui/Text.astro";
 ---
 
 <section
-        class="relative grid grid-cols-[1.7fr_1.2fr] bg-gray-1 h-[115vh] w-full overflow-hidden"
-        style="clip-path: ellipse(110% 100% at 50% 0%);"
+        class="relative grid grid-cols-[1.8fr_1.2fr] bg-gray-1 h-[115vh] w-full overflow-hidden"
+        style="clip-path: ellipse(120% 100% at 50% 0%);"
 >
+    <!-- Contenedor del Logo -->
     <div
-            class="pl-10 h-full bg-[url(/img/BgLogo.png)] -top-[77px] -left-[86px] bg-cover bg-no-repeat bg-right-top flex justify-center relative"
+      class="absolute sm:left-0 md:-left-20 justify-center min-w-[65%] h-full z-0 pointer-events-none"
     >
-        <div
-                class="absolute top-1/2 left-[42%] transform -translate-x-1/2 -translate-y-1/2 flex flex-col text-center gap-6 items-center justify-center max-w-[44rem]"
+        <img
+          alt="Fondo decorativo"
+          class="w-full h-full object-cover"
+          src="/img/BgLogo.png"
         >
+    </div>
+
+
+
+    <div
+            class="p-6 sm:px-16 h-full relative flex justify-center z-10"
+    >
+        <!-- Imagen de fondo -->
+
+        <div
+                class="flex flex-col text-center gap-6 items-center justify-center max-w-[40rem] min-h-[100%] relative z-10"
+        >
+            <!-- Título -->
             <Text
                     as="h1"
                     className="leading-tight md:leading-[60.5px]"
@@ -26,11 +42,12 @@ import Text from "./ui/Text.astro";
                         color="red"
                         size="3.125rem"
                         weight="medium"
-                >baches
-                </Text>
+                        text="baches"
+                />
                 en cada esquina?
             </Text>
 
+            <!-- Descripción -->
             <Text
                     as="p"
                     color="gray-dark"
@@ -44,39 +61,34 @@ import Text from "./ui/Text.astro";
                         color="red"
                         size="1.563rem"
                         weight="light"
-                >Tapa tu hueco
-                </Text>
+                        text="Tapa tu hueco"
+                />
                 es un movimiento ciudadano que busca mejorar la calidad de vida de todos.
             </Text>
 
-            <div
-                    class="flex"
-            >
+            <!-- Botón -->
+            <div class="flex">
                 <button
-                        class="bg-red rounded-full w-[220px] h-[55px] flex items-center
-                        justify-center cursor-pointer transition duration-300 hover:scale-105
-                        hover:bg-red-dark hover:shadow-lg focus:ring focus:ring-red-300"
+                        class="bg-red rounded-full w-[13.75rem] h-[3.44rem] flex items-center justify-center cursor-pointer"
                 >
                     <Text
                             as="p"
                             color="white"
                             font="Fredoka"
                             size="18px"
+                            text="Empezar ahora"
                             weight="medium"
-                    >
-                        Empezar ahora
-                    </Text>
+                    />
                 </button>
             </div>
         </div>
     </div>
 
-    <div
-            class="pr-10 relative flex items-end justify-center h-full"
-    >
+    <!-- Imagen del smartphone -->
+    <div class="pr-10 relative flex items-end justify-center h-[115vh] z-10">
         <img
                 alt="HandSmartPhone"
-                class="w-auto object-cover h-[90%]"
+                class="w-auto max-w-[90%] object-contain h-[90%]"
                 src="/img/HandSmartPhone.png"
         >
     </div>

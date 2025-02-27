@@ -3,25 +3,29 @@ import Text from "./ui/Text.astro";
 import Slider from "../react/Slider";
 ---
 
-<section class="grid items-center justify-items-center p-16 h-screen">
-    <div>
-        <div class="bg-gray-1 rounded-[30px] p-11">
-            <Text
-                    className="leading-tight"
-                    color="blue"
-                    font="LeagueSpartan"
-                    size="58px"
-                    text="Transforma tu ciudad con un clic"
-                    weight="semiBold"
-            />
-            <Text
-                    color="gray-dark"
-                    font="LeagueSpartan"
-                    size="20px"
-                    text="Descubre sobre nuestras funciones"
-                    weight="light"
-            />
+<section class="flex justify-center items-center h-screen p-16">
+    <div class="grid grid-cols-[1fr_.7fr] items-center relative">
+        <div class="bg-gray-1 rounded-[1.875rem] p-11 grid w-[34.625rem] grid-cols-[2fr_1fr] h-fit relative z-0">
+            <div>
+                <Text
+                  className="leading-tight"
+                  color="blue"
+                  font="LeagueSpartan"
+                  size="3.625rem"
+                  text="Transforma tu ciudad con un clic"
+                  weight="semiBold"
+                />
+                <Text
+                  color="gray-dark"
+                  font="LeagueSpartan"
+                  size="1.25rem"
+                  text="Descubre sobre nuestras funciones"
+                  weight="light"
+                />
+            </div>
         </div>
-
+        <div class="absolute top-1/2 -translate-y-1/2 right-[-30px] z-10">
+            <Slider client:visible />
+        </div>
     </div>
 </section>
