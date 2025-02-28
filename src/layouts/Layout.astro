@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import Navbar from "../components/Navbar.astro";
 ---
 
 <!doctype html>
@@ -9,10 +10,11 @@ import '../styles/global.css';
     <meta name="viewport" content="width=device-width"/>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
     <meta name="generator" content="Astro v5.3.0"/>
-    <title>Astro Basics</title>
+    <title>TapaTuHueco</title>
 </head>
 <body>
-<slot/>
+    <Navbar/>
+    <slot/>
 </body>
 </html>
 
@@ -40,4 +42,9 @@ import '../styles/global.css';
         position: relative;
         z-index: 1;
     }
+    
+    html {
+        scroll-behavior: smooth;
+    }
+
 </style>
