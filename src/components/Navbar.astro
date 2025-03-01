@@ -3,12 +3,12 @@ import Text from "./ui/Text.astro";
 ---
 
 <header
-        class="fixed inset-x-0 top-0 z-50 flex w-full flex-wrap text-sm md:flex-nowrap md:justify-start px-10 pt-5 pb-5 backdrop-blur-md bg-gradient-to-b from-white/70 to-transparent"
+        class="fixed inset-x-0 top-0 z-50 flex w-full flex-wrap text-sm md:flex-nowrap md:justify-start px-5 py-2 md:px-10 md:py-5 backdrop-blur-md bg-gradient-to-b from-white/70 to-transparent"
 >
     <nav
-            class="h-16 bg-white w-full rounded-[32.5px] flex justify-between items-center pl-10 pr-2.5 shadow-lg"
+            class="h-16 bg-transparent md:bg-white w-full md:rounded-[32.5px] flex justify-between items-center md:pl-10 md:pr-2.5 md:shadow-lg"
     >
-        <div class="flex gap-6">
+        <div class="flex gap-6 hidden md:flex">
             <a href="#header">
                 <Text
                         as="p"
@@ -49,11 +49,11 @@ import Text from "./ui/Text.astro";
             </a>
         </div>
 
-        <a href="#header">
-            <img src="/svg/Logo.svg" alt="Logo"/>
+        <a href="#header" class="flex items-center">
+            <img src="/svg/Logo.svg" alt="Logo" class="h-[3rem] md:h-[5rem]"/>
         </a>
 
-        <div class="mt-5 flex flex-col gap-y-4 md:mt-0 md:flex-row md:items-center md:justify-end md:gap-x-4 lg:gap-x-7 md:ps-7">
+        <div class="md:mt-5 flex flex-col gap-y-4 md:flex-row md:items-center md:justify-end md:gap-x-4 lg:gap-x-7 md:ps-7">
             <a href="#donwloadApp" class="bg-red h-[49px] w-[170px] rounded-[24.5px] flex justify-center items-center">
                 <Text
                         as="p"

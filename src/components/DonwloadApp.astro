@@ -2,47 +2,48 @@
 import Text from "./ui/Text.astro";
 ---
 
-<section id="donwloadApp" class="grid items-center justify-items-center p-10 h-screen">
-  <div class="grid gap-11">
-    <div class="text-center">
-      <Text
-        as="h1"
-        color="red"
-        font="LeagueSpartan"
-        size="36px"
-        text="Construyamos juntos el Perú que queremos"
-        weight="bold"
-      />
-      <div>
-        <Text
-          color="gray-dark"
-          text="Descarga Tapa tu Hueco y sé parte del cambio."
-          weight="light"
-          size="20px"
-        />
-        <Text
-          color="gray-dark"
-          text="Tu ciudad te necesita."
-          weight="light"
-          size="20px"
-        />
-      </div>
-    </div>
-    <div class="flex justify-center gap-9">
-      <img
-        alt="GooglePlay"
-        class="cursor-pointer"
-        src="/img/GooglePlay.png"
-      >
-      <img
-        alt="GooglePlay"
-        class="cursor-pointer"
-        src="/img/AppStore.png"
-      >
+<section id="donwloadApp" class="grid content-center gap-10 items-center justify-items-center h-screen">
+    <div class="grid justify-items-center gap-11 px-10">
+        <div class="grid text-center w-[18.75rem] md:w-full gap-5">
+            <Text
+                    as="h1"
+                    color="red"
+                    font="LeagueSpartan"
+                    size="36px"
+                    text="Construyamos juntos el Perú que queremos"
+                    weight="bold"
+                    className="leading-[2.188rem]"
+            />
+            <div class="grid">
+                <Text
+                        color="gray-dark"
+                        text="Descarga Tapa tu Hueco y sé parte del cambio."
+                        weight="light"
+                        size="20px"
+                />
+                <Text
+                        color="gray-dark"
+                        text="Tu ciudad te necesita."
+                        weight="light"
+                        size="20px"
+                />
+            </div>
+        </div>
+        <div class="flex flex-col sm:flex-row justify-center gap-8">
+            <img
+                    alt="GooglePlay"
+                    class="cursor-pointer"
+                    src="/img/GooglePlay.png"
+            >
+            <img
+                    alt="GooglePlay"
+                    class="cursor-pointer"
+                    src="/img/AppStore.png"
+            >
+        </div>
     </div>
     <img
-      alt="ComputerSet"
-      src="/img/ComputerSet.png"
+            alt="ComputerSet"
+            src="/img/ComputerSet.png"
     >
-  </div>
 </section>

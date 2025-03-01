@@ -3,15 +3,15 @@ import Text from "./ui/Text.astro";
 import Slider from "../react/Slider";
 ---
 
-<section id="map" class="flex items-center h-screen p-16">
-    <div class="grid w-full">
-        <div class="p-7 grid">
+<section id="map" class="grid md:flex md:items-center h-screen md:p-16">
+    <div class="grid grid-rows-[.5fr_1fr] md:grid-rows-1 w-full">
+        <div class="p-7 flex flex-col gap-4 justify-end">
             <Text
                     color="blue"
                     font="LeagueSpartan"
-                    size="2.625rem"
                     text="Descubre el poder de tu voz"
                     weight="bold"
+                    className="text-[2rem] md:text-[2.625rem] leading-[34px]"
             />
             <Text
                     color="gray-dark"
@@ -19,11 +19,11 @@ import Slider from "../react/Slider";
                     size="1.125rem"
                     text="Explora nuestro mapa interactivo y visualiza cómo los reportes de la comunidad están transformando nuestras calles."
                     weight="light"
-                    className="w-[540px]"
+                    className="md:w-[540px]"
             />
         </div>
-        <div class="min-h-[35.625rem] bg-gray-1 rounded-[30px] flex items-center justify-center">
-            test
+        <div class="h-full md:min-h-[35.625rem] bg-gray-1 md:rounded-[30px] flex items-center justify-center">
+            Mapa
         </div>
     </div>
 </section>
