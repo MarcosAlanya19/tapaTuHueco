@@ -1,0 +1,64 @@
+---
+import Text from "./ui/Text.astro";
+---
+
+<div class="bg-[url(/img/BackGroundFooter.png)] flex justify-between">
+    <div class="flex items-center">
+        <img src="/svg/LogoText.svg" alt="LogoText" class="p-8 px-16"/>
+        <div class="border-l-2 border-gray-3 h-[90%]"/>
+        <div class="flex gap-10 px-16">
+            <a href="#header">
+                <Text
+                        as="p"
+                        color="gray-3"
+                        font="Fredoka"
+                        size="1.5rem"
+                        text="Inicio"
+                        weight="medium"
+                />
+            </a>
+            <a href="#map">
+                <Text
+                        as="p"
+                        color="gray-3"
+                        font="Fredoka"
+                        size="1.5rem"
+                        text="Mapa"
+                        weight="medium"
+                />
+            </a>
+            <a href="#us">
+                <Text
+                        as="p"
+                        color="gray-3"
+                        font="Fredoka"
+                        size="1.5rem"
+                        text="Nosotros"
+                        weight="medium"
+                />
+            </a>
+        </div>
+    </div>
+
+    <div class="p-8 px-16 grid leading-[1rem]">
+        <Text
+                as="p"
+                color="gray-3"
+                font="Fredoka"
+                size="0.75rem"
+                text="Powered by SMART GROUP PERU S.A.C"
+                weight="regular"
+        />
+
+        <Text
+                as="p"
+                color="gray-3"
+                font="Fredoka"
+                size="0.75rem"
+                text="© Todos los derechos reservados."
+                weight="regular"
+        />
+    </div>
+
+
+</div>
