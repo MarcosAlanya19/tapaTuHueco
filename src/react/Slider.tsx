@@ -18,7 +18,7 @@ const Slider = () => {
 				spaceBetween={10}
 				grabCursor
 				loop={true}
-				autoplay={{ delay: 5000, disableOnInteraction: false }}
+				autoplay={{ delay: 15000, disableOnInteraction: false }}
 				navigation={true}
 				pagination={{ clickable: true }}
 				modules={[Navigation, Pagination, Autoplay]}
