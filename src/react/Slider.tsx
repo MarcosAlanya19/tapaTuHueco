@@ -13,7 +13,7 @@ const Slider = () => {
 		<>
 			<Swiper
 				effect="flip"
-				className="rounded-[15px] w-[555px] h-[530px] shadow-none"
+				className="rounded-[15px] w-[430px] md:w-[555px] h-[530px] shadow-none"
 				slidesPerView={1}
 				spaceBetween={10}
 				grabCursor
@@ -25,7 +25,7 @@ const Slider = () => {
 			>
 				{["white", "white", "white", "white"].map((color, index) => (
 					<SwiperSlide key={index}>
-						<div className={`w-[478px] h-[479px] flex items-center justify-center bg-${color} shadow-[0px_10px_33px_2px_#00000026] rounded-lg`}>
+						<div className={`w-[380px] md:w-[478px] h-[479px] flex items-center justify-center bg-${color} shadow-[0px_10px_33px_2px_#00000026] rounded-lg`}>
 							{index + 1}
 						</div>
 					</SwiperSlide>

@@ -4,16 +4,16 @@ import Slider from "../react/Slider";
 ---
 
 <section id="functions" class="flex justify-center items-center h-screen p-16">
-    <div class="grid grid-cols-[1fr_.7fr] items-center relative">
-        <div class="bg-gray-1 rounded-[1.875rem] p-11 grid w-[34.625rem] grid-cols-[2fr_1fr] h-fit relative z-0">
+    <div class="grid md:grid-cols-[1fr_.7fr] items-center relative">
+        <div class="bg-gray-1 mx-7 rounded-[1.875rem] p-11 grid md:w-[34.625rem] md:grid-cols-[2fr_1fr] h-fit relative z-0">
             <div>
                 <Text
                   className="leading-tight"
                   color="blue"
                   font="LeagueSpartan"
-                  size="3.625rem"
                   text="Transforma tu ciudad con un clic"
                   weight="semiBold"
+                  className={"leading-[34px] md:leading-[57px] text-[2rem] md:text-[3.625rem]"}
                 />
                 <Text
                   color="gray-dark"
@@ -24,7 +24,7 @@ import Slider from "../react/Slider";
                 />
             </div>
         </div>
-        <div class="absolute top-1/2 -translate-y-1/2 right-[-30px] z-10">
+        <div class="md:absolute md:top-1/2 md:-translate-y-1/2 md:right-[-30px] z-10 max-w-fit">
             <Slider client:visible />
         </div>
     </div>
