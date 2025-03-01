@@ -2,9 +2,10 @@
 import Text from "./ui/Text.astro";
 ---
 
-<section
+<header
         id="header"
         class="relative grid grid-rows-2  md:grid-rows-1 md:grid-cols-[1.8fr_1.2fr] bg-gray-1 h-screen md:h-[115vh] w-full overflow-hidden"
+        aria-label="Sección principal de Tapa Tu Hueco"
         style="clip-path: ellipse(120% 100% at 50% 0%);"
 >
     <div
@@ -83,12 +84,12 @@ import Text from "./ui/Text.astro";
                 src="/img/HandSmartPhone.png"
         >
     </div>
-</section>
+    </section>
 
-<style is:inline>
-  @media (max-width: 767px) {
-  #header {
-      clip-path: none !important;
-  }
-  }
-</style>
+    <style is:inline>
+      @media (max-width: 767px) {
+        #header {
+          clip-path: none !important;
+        }
+      }
+    </style>

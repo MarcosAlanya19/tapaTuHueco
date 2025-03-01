@@ -2,61 +2,82 @@
 import Text from "./ui/Text.astro";
 ---
 
-<header
+<nav
         class="fixed inset-x-0 top-0 z-50 flex w-full flex-wrap text-sm md:flex-nowrap md:justify-start px-5 py-2 md:px-10 md:py-5 backdrop-blur-md bg-gradient-to-b from-white/70 to-transparent"
 >
-    <nav
+    <div
             class="h-16 bg-transparent md:bg-white w-full md:rounded-[32.5px] flex justify-between items-center md:pl-10 md:pr-2.5 md:shadow-lg"
     >
-        <div class="flex gap-6 hidden md:flex">
-            <a href="#header">
-                <Text
-                        as="p"
+        <ul
+                class="flex gap-6 hidden md:flex"
+        >
+            <li>
+                <a
+                        href="#header"
+                        class="hover:underline"
+                >
+                    <Text
+                            as="span"
+                            color="red"
+                            font="Fredoka"
+                            size="1.125rem"
+                            text="Inicio"
+                            weight="regular"
+                    />
+                </a>
+            </li>
+            <li>
+                <a
+                        href="#us"
+                        class="hover:underline"
+                >
+                    <Text
+                            as="span"
+                            color="red"
+                            font="Fredoka"
+                            size="1.125rem"
+                            text="Nosotros"
+                            weight="regular"
+                    />
+                </a>
+            </li>
+            <li>
+                <a
+                        href="#map"
+                        class="hover:underline"
+                >
+                    <Text
+                            as="span"
+                            color="red"
+                            font="Fredoka"
+                            size="1.125rem"
+                            text="Mapa"
+                            weight="regular"
+                    />
+                </a>
+            </li>
+        </ul>
 
-                        color="red"
-                        font="Fredoka"
-                        size="1.125rem"
-                        text="Inicio"
-                        weight="regular"
-                />
-
-            </a>
-            <a
-                    href="#us"
-            >
-                <Text
-                        as="p"
-                        color="red"
-                        font="Fredoka"
-                        size="1.125rem"
-                        text="Nosotros"
-                        weight="regular"
-                />
-            </a>
-
-            <a
-                    href="#map"
-            >
-                <Text
-                        as="p"
-                        color="red"
-                        font="Fredoka"
-                        size="1.125rem"
-                        text="Mapa"
-                        weight="regular"
-                />
-
-            </a>
-        </div>
-
-        <a href="#header" class="flex items-center">
-            <img src="/svg/Logo.svg" alt="Logo" class="h-[3rem] md:h-[5rem]"/>
+        <a
+                href="#header"
+                class="flex items-center"
+        >
+            <img
+                    src="/svg/Logo.svg"
+                    alt="Nombre del Sitio - Inicio"
+                    class="h-[3rem] md:h-[5rem]"
+            />
         </a>
 
-        <div class="md:mt-5 flex flex-col gap-y-4 md:flex-row md:items-center md:justify-end md:gap-x-4 lg:gap-x-7 md:ps-7">
-            <a href="#donwloadApp" class="bg-red h-[49px] w-[170px] rounded-[24.5px] flex justify-center items-center">
+        <div
+                class="flex flex-col gap-y-4 md:flex-row md:items-center md:justify-end md:gap-x-4 lg:gap-x-7 md:ps-7"
+        >
+            <a
+                    href="#donwloadApp"
+                    class="bg-red h-[49px] w-[170px] rounded-[24.5px] flex justify-center items-center"
+            >
                 <Text
-                        as="p"
+                        as="span"
                         color="white"
                         font="Fredoka"
                         size="1rem"
@@ -65,5 +86,5 @@ import Text from "./ui/Text.astro";
                 />
             </a>
         </div>
-    </nav>
-</header>
+    </div>
+</nav>
