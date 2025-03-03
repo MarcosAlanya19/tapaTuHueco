@@ -4,12 +4,12 @@ import Text from "./ui/Text.astro";
 
 <header
         id="header"
-        class="relative grid grid-rows-2  md:grid-rows-1 md:grid-cols-[1.8fr_1.2fr] bg-gray-1 h-screen md:h-[115vh] w-full overflow-hidden"
+        class="relative grid grid-rows-2  lg:grid-rows-1 lg:grid-cols-[1.8fr_1.2fr] bg-gray-1 h-screen lg:h-[115vh] w-full overflow-hidden"
         aria-label="Sección principal de Tapa Tu Hueco"
         style="clip-path: ellipse(120% 100% at 50% 0%);"
 >
     <div
-            class="absolute md:-left-20 justify-center md:min-w-[65%] h-full z-0 pointer-events-none"
+            class="absolute lg:-left-20 justify-center lg:min-w-[65%] h-full z-0 pointer-events-none"
     >
         <img
                 alt="Fondo decorativo"
@@ -18,18 +18,18 @@ import Text from "./ui/Text.astro";
         />
     </div>
     <div
-            class="p-6 px-10 md:px-16 h-full relative flex w-full md:justify-center z-10"
+            class="p-6 px-10 lg:px-16 h-full relative flex w-full md:justify-center z-10"
     >
         <div
-                class="flex flex-col text-center gap-6 items-center justify-end md:justify-center max-w-[40rem] min-h-[100%] relative z-10 w-full"
+                class="flex flex-col text-center gap-6 items-center justify-end lg:justify-center max-w-[40rem] min-h-[100%] relative z-10 w-full"
         >
             <Text
                     as="h1"
-                    className="leading-tight md:leading-[60.5px]"
+                    className="leading-tight lg:leading-[60.5px]"
                     color="gray-3"
                     font="Fredoka"
                     weight="regular"
-                    className={"text-[2rem] md:text-[3.125rem]"}
+                    className={"text-[2rem] lg:text-[3.125rem]"}
             >
                 ¿Cansado de esquivar
                 <Text
@@ -37,7 +37,7 @@ import Text from "./ui/Text.astro";
                         color="red"
                         weight="medium"
                         text="baches"
-                        className={"text-[2rem] md:text-[3.125rem]"}
+                        className={"text-[2rem] lg:text-[3.125rem]"}
                 />
                 en cada esquina?
             </Text>
@@ -47,7 +47,7 @@ import Text from "./ui/Text.astro";
                     color="gray-dark"
                     font="LeagueSpartan"
                     weight="light"
-                    className="text-[1.125rem] md:text-[1.563rem] leading-[20px] md:leading-[30px]"
+                    className="text-[1.125rem] lg:text-[1.563rem] leading-[20px] lg:leading-[30px]"
             >
                 Más que una app,
                 <Text
@@ -55,14 +55,14 @@ import Text from "./ui/Text.astro";
                         color="red"
                         weight="light"
                         text="Tapa tu hueco"
-                        className="text-[1.125rem] md:text-[1.563rem]"
+                        className="text-[1.125rem] lg:text-[1.563rem]"
                 />
                 es un movimiento ciudadano que busca mejorar la calidad de vida de todos.
             </Text>
 
             <div class="flex">
                 <button
-                        class="bg-red rounded-full w-[9.375rem] md:w-[13.75rem] h-[2.813rem] md:h-[3.44rem] flex items-center justify-center cursor-pointer"
+                        class="bg-red rounded-full w-[9.375rem] lg:w-[13.75rem] h-[2.813rem] lg:h-[3.44rem] flex items-center justify-center cursor-pointer"
                 >
                     <Text
                             as="p"
@@ -70,24 +70,24 @@ import Text from "./ui/Text.astro";
                             font="Fredoka"
                             text="Empezar ahora"
                             weight="medium"
-                            className="text-[14px] md:text-[18px]"
+                            className="text-[14px] lg:text-[18px]"
                     />
                 </button>
             </div>
         </div>
     </div>
 
-    <div class="pr-10 relative flex items-end justify-end md:justify-center md:h-[115vh] z-10 -bottom-6 md:-bottom-0">
+    <div class="pr-10 relative flex items-end justify-end lg:justify-center lg:h-full z-10 -bottom-6 lg:-bottom-0">
         <img
                 alt="HandSmartPhone"
-                class="w-auto md:max-w-[90%] object-contain h-full md:h-[90%]"
+                class="w-auto object-contain h-full lg:h-[90%]"
                 src="/img/HandSmartPhone.png"
         >
     </div>
 </header>
 
 <style is:inline>
-  @media (max-width: 767px) {
+  @media (max-width: 1024px) {
     #header {
       clip-path: none !important;
     }

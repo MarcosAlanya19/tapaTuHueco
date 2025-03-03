@@ -9,12 +9,11 @@ import Text from "./ui/Text.astro";
             class="grid grid-cols-[auto_auto_auto] gap-10 md:gap-0 py-7 md:py-0 md:flex items-center justify-center"
     >
         <div
-                class="grid justify-items-center"
+                class="grid justify-items-center shrink-[0] md:p-8 lg:px-16"
         >
             <img
                     src="/svg/LogoText.svg"
                     alt="LogoText"
-                    class=" md:p-8 md:px-16"
             />
         </div>
         <div
@@ -24,7 +23,7 @@ import Text from "./ui/Text.astro";
                 class="grid justify-items-center"
         >
             <ul
-                    class="flex flex-col md:flex-row md:gap-10 md:px-16"
+                    class="flex flex-col md:flex-row md:gap-5 lg:gap-10 md:px-10 lg:px-16"
             >
                 <li>
                     <a
@@ -73,8 +72,11 @@ import Text from "./ui/Text.astro";
     </div>
 
     <div
-            class="p-8 md:px-16 flex flex-col justify-end text-end leading-[1rem]"
+            class="pr-8 pb-8 py-0 md:py-8 lg:px-16 flex flex-col justify-end items-end text-end leading-[1rem]"
     >
+        <a href="https://www.zycie.org/" target="_blank">
+            <img src="/svg/LogoZycie.svg" alt="LogoZycie" class="h-9">
+        </a>
         <Text
                 as="p"
                 color="gray-3"
