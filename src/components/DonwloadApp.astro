@@ -1,4 +1,5 @@
 ---
+import {Image} from 'astro:assets';
 import Text from "./ui/Text.astro";
 ---
 
@@ -13,7 +14,7 @@ import Text from "./ui/Text.astro";
                 class="grid text-center w-[18.75rem] md:w-full gap-5"
         >
             <Text
-                    as="h1"
+                    as="h2"
                     color="red"
                     font="LeagueSpartan"
                     size="36px"
@@ -55,9 +56,11 @@ import Text from "./ui/Text.astro";
             >
         </div>
     </div>
-    <img
+    <Image
             alt="ComputerSet"
             src="/img/ComputerSet.png"
-            loading="lazy"
+            class="w-auto object-contain h-full lg:h-[90%]"
+            height={100}
+            width={100}
     >
 </section>

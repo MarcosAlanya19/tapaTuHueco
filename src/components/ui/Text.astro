@@ -66,3 +66,12 @@ const classStyle = `inline-block z-5 ${className}`;
     {text || <slot />}
   </h1>
 }
+
+{as === 'h2' &&
+<h2
+  class={classStyle}
+  style={style}
+>
+  {text || <slot />}
+</h2>
+  }

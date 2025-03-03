@@ -5,12 +5,16 @@ import Functions from '../components/Functions.astro';
 import Header from '../components/Header.astro';
 import Us from '../components/Us.astro';
 import Layout from '../layouts/Layout.astro';
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout>
+    <Navbar />
     <Header/>
     <Us/>
     <Map />
     <Functions/>
     <DonwloadApp/>
+    <Footer />
 </Layout>

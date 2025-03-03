@@ -1,7 +1,5 @@
 ---
 import '../styles/global.css';
-import Navbar from "../components/Navbar.astro";
-import Footer from "../components/Footer.astro"
 ---
 
 <!doctype html>
@@ -9,31 +7,35 @@ import Footer from "../components/Footer.astro"
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width"/>
+    
+    <meta name="geo.region" content="PE">
+    <meta name="geo.placename" content="Perú">
+    <meta name="geo.position" content="-9.189967;-75.015152">
+    <meta name="ICBM" content="-9.189967, -75.015152">
+    
     <link rel="icon" type="image/svg+xml" href="/svg/Logo.svg"/>
     <meta name="generator" content="Astro v5.3.0"/>
-    <title>TapaTuHueco</title>
+    <title>TapaTuHueco - Denuncia y Soluciona Baches en tu Comunidad</title>
     
-    <meta name="description" content="TapaTuHueco - Soluciones para calles y baches en tu ciudad.">
-    <meta name="keywords" content="reparación de calles, baches, infraestructura urbana, mantenimiento vial">
+    <meta name="description" content="¿Calles en mal estado? Con TapaTuHueco puedes reportar baches y ayudar a mejorar tu comunidad. Descubre cómo hacemos la diferencia.">
+    <meta name="keywords" content="reparación de calles, baches, denuncia de baches, mantenimiento vial, infraestructura urbana, calles en mal estado, solución para baches">
     <meta name="author" content="TapaTuHueco">
     
     <!-- Open Graph para redes sociales -->
-    <meta property="og:title" content="TapaTuHueco - Mejora tu ciudad">
-    <meta property="og:description" content="Plataforma para reportar y solucionar problemas viales en tu comunidad.">
+    <meta property="og:title" content="TapaTuHueco - Denuncia y Soluciona Baches en tu Comunidad">
+    <meta property="og:description" content="¿Calles en mal estado? Con TapaTuHueco puedes reportar baches y ayudar a mejorar tu comunidad. Descubre cómo hacemos la diferencia.">
     <meta property="og:image" content="/img/Logo.png">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://tapatuhueco.com">
     
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="TapaTuHueco - Mejora tu ciudad">
-    <meta name="twitter:description" content="Plataforma para reportar y solucionar problemas viales en tu comunidad.">
+    <meta name="twitter:title" content="TapaTuHueco - Denuncia y Soluciona Baches en tu Comunidad">
+    <meta name="twitter:description" content="¿Calles en mal estado? Con TapaTuHueco puedes reportar baches y ayudar a mejorar tu comunidad. Descubre cómo hacemos la diferencia.">
     <meta name="twitter:image" content="/img/Logo.png">
 </head>
 <body>
-    <Navbar/>
     <slot/>
-    <Footer />
 </body>
 </html>
 
