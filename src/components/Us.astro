@@ -7,10 +7,10 @@ import Text from "./ui/Text.astro";
         class="grid items-center justify-items-center p-3 p-16 h-screen scroll-mt-10"
 >
     <article
-            class="bg-red rounded-3xl p-16 md:grid lg:grid-cols-[2fr_2.5fr] gap-8"
+            class="bg-red rounded-3xl p-16 md:grid items-center lg:grid-cols-[2fr_2.5fr] gap-8"
     >
         <div
-                class="space-y-4"
+                class="space-y-4 lg:space-y-0"
         >
             <Text
                     as="h2"
@@ -31,7 +31,7 @@ import Text from "./ui/Text.astro";
           autoplay
           muted
           playsinline
-          class="pointer-events-none"
+          class="pointer-events-none h-full w-full"
         >
             <source src="/videos/UsAnimate.mp4" type="video/mp4"/>
         </video>

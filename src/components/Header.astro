@@ -78,14 +78,15 @@ import Text from "./ui/Text.astro";
         </div>
     </div>
 
-    <div class="pr-10 relative flex items-end justify-end lg:justify-center lg:h-full z-10 -bottom-6 lg:-bottom-0">
-        <Image
-                alt="HandSmartPhone"
-                class="w-auto object-contain h-full lg:h-[90%]"
-                src="/img/HandSmartPhone.png"
-                height={100}
-                width={100}
-        >
+    <div class=" relative flex items-end justify-end lg:justify-center lg:h-full z-10 -bottom-6 lg:-bottom-0">
+            <video
+              autoplay
+              muted
+              playsinline
+              class="w-full object-contain lg:object-cover h-full"
+            >
+                <source src="/videos/HandSmartPhone.webm" type="video/webm" />
+            </video>
     </div>
 </header>
 
@@ -94,5 +95,33 @@ import Text from "./ui/Text.astro";
     #header {
       clip-path: none !important;
     }
+  }
+  
+  video {
+      height: 100%;
+  }
+  
+  @media (max-width: 1449px) {
+      video {
+          height: 80%;
+      }
+  }
+  
+  @media (max-width: 1320px) {
+      video {
+          height: 70%;
+      }
+  }
+  
+  @media (max-width: 1024px) {
+      video {
+          height: 100%;
+      }
+  }
+  
+  @media (min-width: 1450px) {
+      video {
+          height: 90%;
+      }
   }
 </style>
