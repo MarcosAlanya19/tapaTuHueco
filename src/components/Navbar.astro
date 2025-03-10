@@ -1,10 +1,9 @@
 ---
+import {Image} from 'astro:assets';
 import Text from "./ui/Text.astro";
 ---
 
-<nav
-  class="fixed inset-x-0 top-0 z-50 flex w-full flex-wrap text-sm md:flex-nowrap md:justify-start px-5 py-2 md:px-10 md:py-5 backdrop-blur-md bg-gradient-to-b from-white/70 to-transparent h-[4rem] md:h-[5rem]"
->
+<nav class="fixed inset-x-0 top-0 z-20 flex w-full flex-wrap text-sm md:flex-nowrap md:justify-start px-5 py-2 md:px-10 md:py-5 backdrop-blur-md bg-gradient-to-b from-white/70 to-transparent h-[4rem] md:h-[5rem]">
     <div
             class="h-16 bg-transparent md:bg-white w-full md:rounded-[32.5px] flex justify-between items-center md:pl-10 md:pr-2.5 md:shadow-lg"
     >
@@ -70,7 +69,7 @@ import Text from "./ui/Text.astro";
         </a>
 
         <div
-                class="flex flex-col gap-y-4 md:flex-row md:items-center md:justify-end md:gap-x-4 lg:gap-x-7 md:ps-7"
+                class="flex gap-y-4 md:flex-row items-center md:justify-end gap-x-4 lg:gap-x-7 md:ps-7"
         >
             <a
                     href="#donwloadApp"
@@ -85,6 +84,140 @@ import Text from "./ui/Text.astro";
                         weight="medium"
                 />
             </a>
+            <button
+                    id="burger-button"
+                    type="button"
+                    class="hs-collapse-toggle flex h-8 w-8 items-center justify-center rounded-full text-sm font-bold text-neutral-600 transition duration-300 hover:bg-neutral-200 disabled:pointer-events-none disabled:opacity-50 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:outline-hidden md:hidden"
+                    data-hs-collapse="#navbar-collapse-with-animation"
+                    aria-controls="navbar-collapse-with-animation"
+                    aria-label="Toggle navigation"
+            >
+                <svg width="27" height="14" viewBox="0 0 27 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 2H25.5" stroke="#E42521" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M2 7H25.5" stroke="#E42521" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M2 12H25.5" stroke="#E42521" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+            </button>
         </div>
     </div>
 </nav>
+
+<div id="overlay"
+     class="fixed inset-0 bg-red z-30 hidden h-screen w-screen overscroll-y-none transform -translate-y-full transition-transform duration-300 flex flex-col items-center justify-center">
+
+    <button id="close-overlay" class="absolute top-4 right-4">
+        <svg
+                class="h-[1.5rem] w-[1.5rem] text-white"
+                width="36"
+                height="36"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+        >
+            <path d="M18 6 6 18"></path>
+            <path d="m6 6 12 12"></path>
+        </svg>
+    </button>
+
+    <ul class="flex flex-col gap-8 text-2xl h-full items-center justify-center">
+        <li class="h-[20%] grid items-center">
+            <a href="#header" class="hover:underline">
+                <Text as="span" color="white" font="Fredoka" size="2.5rem" text="Inicio" weight="regular"/>
+            </a>
+        </li>
+        <li class="h-[20%] grid items-center">
+            <a href="#us" class="hover:underline">
+                <Text as="span" color="white" font="Fredoka" size="2.5rem" text="Nosotros" weight="regular"/>
+            </a>
+        </li>
+        <li class="h-[20%] grid items-center">
+            <a href="#map" class="hover:underline">
+                <Text as="span" color="white" font="Fredoka" size="2.5rem" text="Mapa" weight="regular"/>
+            </a>
+        </li>
+    </ul>
+
+    <div class="flex flex-col py-16 gap-4">
+        <Image
+                height={250}
+                width={250}
+                alt="GooglePlay"
+                class="cursor-pointer"
+                src="/img/GooglePlay.png"
+                loading="lazy"
+        />
+        <Image
+                height={250}
+                width={250}
+                alt="GooglePlay"
+                class="cursor-pointer"
+                src="/img/AppStore.png"
+                loading="lazy"
+        />
+    </div>
+</div>
+
+
+<style is:inline>
+  .overlay-enter {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-out;
+  }
+
+  .overlay-enter-active {
+    transform: translateY(0);
+    transition: transform 0.3s ease-out;
+  }
+
+  .overlay-exit {
+    transform: translateY(0);
+    transition: transform 0.3s ease-in;
+  }
+
+  .overlay-exit-active {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in;
+  }
+
+  .transition-all {
+    transition: all 0.3s ease-out;
+  }
+</style>
+
+<script>
+	const burgerButton = document.getElementById('burger-button');
+	const overlay = document.getElementById('overlay');
+	const closeButton = document.getElementById('close-overlay');
+	const menuLinks = overlay.querySelectorAll('a');
+	
+	function closeMenu() {
+		overlay.classList.remove('translate-y-0');
+		overlay.classList.add('translate-y-full');
+		
+		setTimeout(() => {
+			overlay.classList.add('hidden');
+			overlay.classList.remove('translate-y-full');
+			overlay.classList.add('-translate-y-full');
+		}, 300);
+		
+		document.body.style.overflow = 'auto';
+	}
+	
+	burgerButton.addEventListener('click', function () {
+		overlay.classList.remove('hidden');
+		setTimeout(() => {
+			overlay.classList.remove('-translate-y-full');
+			overlay.classList.add('translate-y-0');
+		}, 10);
+		
+		document.body.style.overflow = 'hidden';
+	});
+	
+	closeButton.addEventListener('click', closeMenu);
+	
+	menuLinks.forEach(link => {
+		link.addEventListener('click', closeMenu);
+	});
+</script>
