@@ -1,5 +1,6 @@
 ---
 import Text from "./ui/Text.astro";
+import {Image} from "astro:assets";
 ---
 
 <section
@@ -27,14 +28,12 @@ import Text from "./ui/Text.astro";
                     weight="light"
             />
         </div>
-        <video
-          autoplay
-          muted
-          playsinline
-          class="pointer-events-none h-full w-full"
-        >
-            <source src="/videos/UsAnimate.mp4" type="video/mp4"/>
-        </video>
-
+        <Image
+          width={100}
+          height={100}
+          src={"/gif/UsAnimate.gif"}
+          alt={"Persona caminando"}
+          class="pointer-events-none h-full w-full mix-blend-normal"
+        />
     </article>
 </section>

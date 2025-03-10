@@ -139,49 +139,54 @@ const Slider = () => {
 
         @media (max-width: 580px) {
           .swiper-custom {
-            width: 500px;
-            height: 500px;
+            width: 450px;
+            height: 550px;
           }
 	        
           .swiper-slide-custom {
-            width: 420px;
-            height: 420px;
+            width: 355px;
+            height: 455px;
           }
         }
 
-        @media (max-width: 500px) {
+        @media (max-width: 480px) {
+          .swiper-button-prev::after,
+          .swiper-button-next::after {
+            display: none;
+          }
+	        
           .swiper-custom {
-            width: 440px;
-            height: 440px;
+            width: 430px;
+            height: 500px;
           }
 
           .swiper-slide-custom {
-            width: 360px;
-            height: 360px;
+            width: 400px;
+            height: 455px;
           }
         }
 
         @media (max-width: 450px) {
           .swiper-custom {
-            width: 380px;
-            height: 380px;
+            width: 400px;
+            height: 470px;
           }
 
           .swiper-slide-custom {
-            width: 300px;
-            height: 300px;
+            width: 370px;
+            height: 425px;
           }
         }
 
-        @media (max-width: 400px) {
+        @media (max-width: 420px) {
           .swiper-custom {
-            width: 320px;
-            height: 320px;
+            width: 370px;
+            height: 440px;
           }
 
           .swiper-slide-custom {
-            width: 240px;
-            height: 240px;
+            width: 340px;
+            height: 395px;
           }
         }
 			`}</style>
