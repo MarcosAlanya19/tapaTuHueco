@@ -61,10 +61,12 @@ import Text from "./ui/Text.astro";
                 href="#header"
                 class="flex items-center"
         >
-            <img
+            <Image
+                    height={80}
+                    width={80}
                     src="/svg/Logo.svg"
                     alt="Nombre del Sitio - Inicio"
-                    class="h-[3rem] md:h-[5rem]"
+                    class="h-[50px] md:h-[80px] w-[50px] md:w-[80px]"
             />
         </a>
 
@@ -92,72 +94,137 @@ import Text from "./ui/Text.astro";
                     aria-controls="navbar-collapse-with-animation"
                     aria-label="Toggle navigation"
             >
-                <svg width="27" height="14" viewBox="0 0 27 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M2 2H25.5" stroke="#E42521" stroke-width="3" stroke-linecap="round"/>
-                    <path d="M2 7H25.5" stroke="#E42521" stroke-width="3" stroke-linecap="round"/>
-                    <path d="M2 12H25.5" stroke="#E42521" stroke-width="3" stroke-linecap="round"/>
+                <svg
+                        width="27"
+                        height="14"
+                        viewBox="0 0 27 14"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                            d="M2 2H25.5"
+                            stroke="#E42521"
+                            stroke-width="3"
+                            stroke-linecap="round"
+                    />
+                    <path
+                            d="M2 7H25.5"
+                            stroke="#E42521"
+                            stroke-width="3"
+                            stroke-linecap="round"
+                    />
+                    <path
+                            d="M2 12H25.5"
+                            stroke="#E42521"
+                            stroke-width="3"
+                            stroke-linecap="round"
+                    />
                 </svg>
             </button>
         </div>
     </div>
 </nav>
 
-<div id="overlay"
-     class="fixed inset-0 bg-red z-30 hidden h-screen w-screen overscroll-y-none transform -translate-y-full transition-transform duration-300 flex flex-col items-center justify-center">
-
-    <button id="close-overlay" class="absolute top-4 right-4">
-        <svg
-                class="h-[1.5rem] w-[1.5rem] text-white"
-                width="36"
-                height="36"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="3"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-        >
-            <path d="M18 6 6 18"></path>
-            <path d="m6 6 12 12"></path>
-        </svg>
-    </button>
-
-    <ul class="flex flex-col gap-8 text-2xl h-full items-center justify-center">
-        <li class="h-[20%] grid items-center">
-            <a href="#header" class="hover:underline">
-                <Text as="span" color="white" font="Fredoka" size="2.5rem" text="Inicio" weight="regular"/>
-            </a>
-        </li>
-        <li class="h-[20%] grid items-center">
-            <a href="#us" class="hover:underline">
-                <Text as="span" color="white" font="Fredoka" size="2.5rem" text="Nosotros" weight="regular"/>
-            </a>
-        </li>
-        <li class="h-[20%] grid items-center">
-            <a href="#map" class="hover:underline">
-                <Text as="span" color="white" font="Fredoka" size="2.5rem" text="Mapa" weight="regular"/>
-            </a>
-        </li>
-    </ul>
-
-    <div class="flex flex-col py-16 gap-4">
+<div
+  id="overlay"
+  class="fixed inset-0 bg-red z-30 hidden h-screen w-screen overscroll-y-none transform -translate-y-full transition-transform duration-300 grid grid-rows-[auto_1fr_auto] p-4 md:p-8"
+>
+    <div class="flex justify-between w-full pb-5">
         <Image
-                height={250}
-                width={250}
-                alt="GooglePlay"
-                class="cursor-pointer"
-                src="/img/GooglePlay.png"
-                loading="lazy"
+          height={80}
+          width={80}
+          src="/svg/Logo.svg"
+          alt="Nombre del Sitio - Inicio"
+          class="h-[50px] md:h-[80px] w-[50px] md:w-[80px]"
+        />
+        <button id="close-overlay" class="top-4 right-4">
+            <svg
+              width="24"
+              height="21"
+              viewBox="0 0 24 21"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                  d="M3.44141 2L20.0584 18.617"
+                  stroke="white"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M3.44141 18.6171L20.0584 2.00006"
+                  stroke="white"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                />
+            </svg>
+        </button>
+    </div>
+    
+    <!-- Menú de navegación -->
+    <div class="flex flex-col items-center justify-start pr-3 flex-1">
+        <ul class="text-2xl w-full space-y-6">
+            <a href="#header" class="hover:underline block text-right">
+                <li>
+                    <Text
+                      as="span"
+                      color="white"
+                      font="Fredoka"
+                      size="2.5rem"
+                      text="Inicio"
+                      weight="medium"
+                    />
+                </li>
+            </a>
+            <a href="#us" class="hover:underline block text-right">
+                <li>
+                    <Text
+                      as="span"
+                      color="white"
+                      font="Fredoka"
+                      size="2.5rem"
+                      text="Nosotros"
+                      weight="medium"
+                    />
+                </li>
+            </a>
+            <a href="#map" class="hover:underline block text-right">
+                <li>
+                    <Text
+                      as="span"
+                      color="white"
+                      font="Fredoka"
+                      size="2.5rem"
+                      text="Mapa"
+                      weight="medium"
+                    />
+                </li>
+            </a>
+        </ul>
+    </div>
+    
+    <!-- Sección de descargas -->
+    <div class="flex flex-col justify-end items-center gap-4 pb-6">
+        <Image
+          height={60}
+          width={180}
+          alt="GooglePlay"
+          class="cursor-pointer w-[180px]"
+          src="/img/GooglePlay.png"
+          loading="lazy"
         />
         <Image
-                height={250}
-                width={250}
-                alt="GooglePlay"
-                class="cursor-pointer"
-                src="/img/AppStore.png"
-                loading="lazy"
+          height={60}
+          width={180}
+          alt="AppStore"
+          class="cursor-pointer w-[180px]"
+          src="/img/AppStore.png"
+          loading="lazy"
         />
+        <div class="border-b-4 rounded-xl w-[100px] mt-10" />
     </div>
 </div>
+
 
 
 <style is:inline>
