@@ -4,17 +4,17 @@ import Text from "./ui/Text.astro";
 
 <section
         id="us"
-        class="grid items-center justify-items-center p-3 md:p-16 h-screen scroll-mt-10"
+        class="grid items-center justify-items-center p-3 p-16 h-screen scroll-mt-10"
 >
     <article
-            class="bg-red rounded-3xl p-16 grid lg:grid-cols-[2fr_2.5fr] gap-8 max-w-6xl"
+            class="bg-red rounded-3xl p-16 md:grid lg:grid-cols-[2fr_2.5fr] gap-8"
     >
         <div
                 class="space-y-4"
         >
             <Text
                     as="h2"
-                    className="leading-tight text-[30px] md:text-[44px]"
+                    className="leading-tight text-[30px] lg:text-[44px]"
                     color="white"
                     font="LeagueSpartan"
                     text="Creemos que cada ciudadano tiene el derecho a vivir en una ciudad segura y limpia"
@@ -27,15 +27,14 @@ import Text from "./ui/Text.astro";
                     weight="light"
             />
         </div>
-        <div
-                class="flex items-center justify-center"
+        <video
+          autoplay
+          muted
+          playsinline
+          class="pointer-events-none"
         >
-            <img
-                    alt="usAnimate"
-                    class="max-w-full h-auto"
-                    src="/img/UsAnimate.png"
-                    loading="lazy"
-            />
-        </div>
+            <source src="/videos/UsAnimate.mp4" type="video/mp4"/>
+        </video>
+
     </article>
 </section>
