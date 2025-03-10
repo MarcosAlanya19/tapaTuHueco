@@ -42,25 +42,29 @@ import Text from "./ui/Text.astro";
         <div
                 class="flex flex-col sm:flex-row justify-center gap-8"
         >
-            <img
+            <Image
+                    width={180}
+                    height={60}
                     alt="GooglePlay"
                     class="cursor-pointer"
-                    src="/img/GooglePlay.png"
+                    src="/svg/GooglePlay.svg"
                     loading="lazy"
-            >
-            <img
-                    alt="GooglePlay"
+            />
+            <Image
+                    width={180}
+                    height={60}
+                    alt="AppStore"
                     class="cursor-pointer"
-                    src="/img/AppStore.png"
                     loading="lazy"
-            >
+                    src="/svg/AppStore.svg"
+            />
         </div>
     </div>
     <Image
             alt="ComputerSet"
-            src="/img/ComputerSet.png"
             class="w-auto object-contain h-full lg:h-[90%]"
             height={100}
+            src="/img/ComputerSet.png"
             width={100}
     >
 </section>

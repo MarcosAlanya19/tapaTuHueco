@@ -172,6 +172,18 @@ const Slider = () => {
             height: 300px;
           }
         }
+
+        @media (max-width: 400px) {
+          .swiper-custom {
+            width: 320px;
+            height: 320px;
+          }
+
+          .swiper-slide-custom {
+            width: 240px;
+            height: 240px;
+          }
+        }
 			`}</style>
 		</div>
 	);
