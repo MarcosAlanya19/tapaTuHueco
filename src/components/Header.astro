@@ -10,6 +10,7 @@ import Text from "./ui/Text.astro";
         style="clip-path: ellipse(120% 100% at 50% 0%);"
 >
     <div
+            id="imgHeader"
             class="absolute lg:-left-20 justify-center lg:min-w-[65%] h-full z-0 pointer-events-none"
     >
         <img
@@ -19,7 +20,8 @@ import Text from "./ui/Text.astro";
         />
     </div>
     <div
-            class="p-6 px-10 lg:px-16 h-full relative flex w-full md:justify-center z-10"
+      id="header-left"
+      class="p-6 px-10 lg:px-16 h-full relative flex w-full md:justify-center z-10"
     >
         <div
                 class="flex flex-col text-center gap-6 items-center justify-end lg:justify-center max-w-[40rem] min-h-[100%] relative z-10 w-full"
@@ -78,7 +80,7 @@ import Text from "./ui/Text.astro";
         </div>
     </div>
 
-    <div class=" relative flex items-end justify-end lg:justify-center lg:h-full z-10 -bottom-6 lg:-bottom-0">
+    <div class=" relative flex items-end justify-end lg:justify-center lg:h-full z-10 -bottom-3.5 lg:-bottom-0">
             <Image
               width={100}
               height={100}
@@ -90,6 +92,7 @@ import Text from "./ui/Text.astro";
 </header>
 
 <style is:inline>
+  
   @media (max-width: 1024px) {
     #header {
       clip-path: none !important;
@@ -114,6 +117,12 @@ import Text from "./ui/Text.astro";
   
   @media (max-width: 1024px) {
       img {
+          height: 65%;
+      }
+  }
+  
+  @media (max-width: 1023px) {
+      img {
           height: 100%;
       }
   }
@@ -121,6 +130,30 @@ import Text from "./ui/Text.astro";
   @media (min-width: 1450px) {
       img {
           height: 90%;
+      }
+  }
+  
+  @media (max-width: 1000px) and (orientation: landscape) {
+      img {
+          height: 80%;
+      }
+      
+      #header {
+          display: grid;
+          grid-template-rows: 1fr;
+          align-items: center;
+      }
+      
+      #header-left {
+          height: 100vh;
+          display: grid;
+          margin-top: 24px;
+          align-content: center;
+          padding-inline: 6px;
+      }
+      
+      #imgHeader {
+          display: none;
       }
   }
 </style>

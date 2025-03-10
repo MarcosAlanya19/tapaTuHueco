@@ -13,7 +13,7 @@ import Slider from "../react/Slider";
         <div
                 class="bg-gray-1 md:mx-7 rounded-[1.875rem] p-11 grid lg:w-[34.625rem] lg:grid-cols-[2fr_1fr] h-fit relative z-0"
         >
-            <div>
+            <div class="grid">
                 <Text
                         as="h2"
                         color="blue"
@@ -41,3 +41,12 @@ import Slider from "../react/Slider";
         </div>
     </article>
 </section>
+
+<style is:inline>
+    @media (max-width: 1024px) and (orientation: landscape) {
+        #functions {
+            height: 100%;
+        }
+    }
+
+</style>

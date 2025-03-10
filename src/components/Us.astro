@@ -4,28 +4,26 @@ import {Image} from "astro:assets";
 ---
 
 <section
-        id="us"
-        class="grid items-center justify-items-center p-3 my-16 md:p-16 h-screen scroll-mt-10"
+  id="us"
+  class="grid items-center justify-items-center p-3 my-16 md:p-16 h-screen scroll-mt-10"
 >
     <article
-            class="bg-red rounded-3xl p-10 md:p-14 lg:p-16 md:grid items-center lg:grid-cols-[2fr_2.5fr] gap-8"
+      class="bg-red rounded-3xl p-10 md:p-14 lg:p-16 md:grid items-center lg:grid-cols-[2fr_2.5fr] gap-8 us-container"
     >
-        <div
-                class="space-y-4 lg:space-y-0"
-        >
+        <div class="space-y-4 lg:space-y-0 us-text">
             <Text
-                    as="h2"
-                    className="leading-tight text-[30px] lg:text-[44px]"
-                    color="white"
-                    font="LeagueSpartan"
-                    text="Creemos que cada ciudadano tiene el derecho a vivir en una ciudad segura y limpia"
-                    weight="semiBold"
+              as="h2"
+              className="leading-tight text-[30px] lg:text-[44px]"
+              color="white"
+              font="LeagueSpartan"
+              text="Creemos que cada ciudadano tiene el derecho a vivir en una ciudad segura y limpia"
+              weight="semiBold"
             />
             <Text
-                    color="white"
-                    size="22px"
-                    text="Nuestra misión es empoderar a la comunidad para que sea agente de cambio y transforme su entorno."
-                    weight="light"
+              color="white"
+              size="22px"
+              text="Nuestra misión es empoderar a la comunidad para que sea agente de cambio y transforme su entorno."
+              weight="light"
             />
         </div>
         <Image
@@ -33,7 +31,37 @@ import {Image} from "astro:assets";
           height={100}
           src={"/gif/UsAnimate.gif"}
           alt={"Persona caminando"}
-          class="pointer-events-none h-full w-full mix-blend-normal"
+          class="pointer-events-none h-full w-full mix-blend-normal us-image"
         />
     </article>
 </section>
+
+
+
+<style is:inline>
+    
+    @media (max-width: 1024px) and (orientation: landscape) {
+        #us {
+            height: auto;
+            padding: 3rem 2rem;
+        }
+        
+        .us-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 2rem;
+        }
+        
+        .us-text {
+            flex: 1;
+            text-align: left;
+        }
+        
+        .us-image {
+            flex: 1;
+            max-width: 50%;
+        }
+    }
+
+</style>
