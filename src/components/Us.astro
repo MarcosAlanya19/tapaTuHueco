@@ -10,10 +10,10 @@ import {Image} from "astro:assets";
     <article
       class="bg-red rounded-3xl p-10 md:p-14 lg:p-16 md:grid items-center lg:grid-cols-[2fr_2.5fr] gap-8 us-container"
     >
-        <div class="space-y-4 lg:space-y-0 us-text">
+        <div class="grid gap-[33px] us-text">
             <Text
               as="h2"
-              className="leading-tight text-[30px] lg:text-[44px]"
+              className="leading-[45px] text-[30px] lg:text-[44px]"
               color="white"
               font="LeagueSpartan"
               text="Creemos que cada ciudadano tiene el derecho a vivir en una ciudad segura y limpia"
@@ -24,14 +24,15 @@ import {Image} from "astro:assets";
               size="22px"
               text="Nuestra misión es empoderar a la comunidad para que sea agente de cambio y transforme su entorno."
               weight="light"
+              className="leading-[25px]"
             />
         </div>
         <Image
           width={100}
           height={100}
-          src={"/gif/UsAnimate.gif"}
+          src={"/gif/test.gif"}
           alt={"Persona caminando"}
-          class="pointer-events-none h-full w-full mix-blend-normal us-image"
+          class="pointer-events-none mix-blend-normal us-image w-full"
         />
     </article>
 </section>
