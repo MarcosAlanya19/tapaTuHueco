@@ -5,7 +5,7 @@ import Text from "./ui/Text.astro";
 
 <header
         id="header"
-        class="relative grid lg:grid-cols-[1.8fr_1.2fr] bg-gray-1 h-[105vh] md:h-[110vh] w-full overflow-hidden"
+        class="relative grid lg:grid-cols-[1.8fr_1.3fr] bg-gray-1 h-[105vh] gap-4 lg:gap-0 md:h-[110vh] w-full overflow-hidden"
         aria-label="Sección principal de Tapa Tu Hueco"
         style="clip-path: ellipse(150% 100% at 50% 0%);"
 >
@@ -14,7 +14,7 @@ import Text from "./ui/Text.astro";
     />
     <div
             id="header-left"
-            class="p-6 pb-0 px-10 lg:px-16 h-full relative flex w-full md:justify-center z-10"
+            class="p-6 pb-0 pr-10 md:pr-0 px-10  h-full relative flex w-full md:justify-center z-10"
     >
         <div
                 class="flex flex-col text-center gap-6 items-center justify-end lg:justify-center max-w-[40rem] mt-12 lg:mt-0 md:min-h-[100%] relative z-10 w-full"
@@ -74,8 +74,9 @@ import Text from "./ui/Text.astro";
         </div>
     </div>
 
-    <div class="relative flex items-end justify-end lg:justify-center z-10 -right-12 -bottom-3.5 lg:-bottom-0 mt-5">
+    <div id="imgHandle" class="relative flex items-end justify-end lg:justify-center z-10 -right-12 -bottom-3.5 lg:-bottom-0">
         <Image
+                
                 width={100}
                 height={100}
                 src={"/gif/HandSmartPhone.gif"}
@@ -113,41 +114,89 @@ import Text from "./ui/Text.astro";
       pointer-events: none;
     }
   }
-  
+
   @media (max-width: 1205px) {
-      #imgHeader {
-          width: 145vh;
-      }
+    #imgHeader {
+      width: 145vh;
+    }
   }
-  
+
   @media (max-width: 1115px) {
-      #imgHeader {
-          width: 135vh;
-      }
+    #imgHeader {
+      width: 135vh;
+    }
   }
 
   @media (max-width: 1024px) {
     #header {
       clip-path: ellipse(250% 100% at 50% 0%) !important;
     }
-      
-      #imgHeader {
-          position: absolute;
-          top: 15vh;
-          left: 50%;
-          transform: translateX(-50%);
-          width: 100vh;
-          height: 90vh;
-          background: url(/img/BgLogo.png) no-repeat center;
-          background-size: cover;
-          z-index: 0;
-          pointer-events: none;
-      }
+
+    #imgHeader {
+      position: absolute;
+      top: 15vh;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100vh;
+      height: 90vh;
+      background: url(/img/BgLogo.png) no-repeat center;
+      background-size: cover;
+      z-index: 0;
+      pointer-events: none;
+    }
   }
-  
+
+  @media (max-width: 380px) {
+    #imgHandle {
+      top: 0 !important;
+    }
+  }
+
+
   @media (max-width: 1024px) and (orientation: landscape) {
-      #header {
-          height: 100%;
-      }
+    #header {
+      height: 100%;
+    }
+  }
+
+
+  #imgHand {
+    position: absolute;
+    top: -20vh; /* Se extiende hacia arriba */
+    left: 50%;
+    transform: translateX(-50%); /* Mantiene la imagen centrada */
+    width: 180vw; /* Más ancho que la pantalla */
+    height: 140vh; /* Más alto para salir por arriba */
+    background: url(/img/BgLogo.png) no-repeat center;
+    background-size: cover; /* Se ajusta sin espacios blancos */
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  @media (max-width: 1024px) {
+    #header {
+      clip-path: ellipse(250% 100% at 50% 0%) !important;
+    }
+
+    #imgHand {
+      top: -10vh; /* Ajuste menor en móviles */
+      width: 160vw; /* Un poco más ancho */
+      height: 130vh; /* Mantiene una buena cobertura */
+    }
+  }
+
+  @media (max-width: 768px) {
+    #imgHand {
+      width: 180vw;
+      height: 150vh;
+    }
+  }
+
+  @media (max-width: 480px) {
+    #imgHand {
+      width: 200vw;
+      height: 160vh;
+      top: -5vh;
+    }
   }
 </style>
