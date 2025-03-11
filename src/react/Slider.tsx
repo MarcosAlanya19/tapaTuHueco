@@ -68,7 +68,7 @@ const Slider = () => {
           width: 480px;
           height: 480px;
           border-radius: 15px;
-          box-shadow: 0px 10px 33px 2px #00000026;
+          box-shadow: 0px 10px 33px 2px rgba(0, 0, 0, 0.15);
         }
 
         .slide-text {
@@ -163,36 +163,36 @@ const Slider = () => {
           }
 	        
           .swiper-custom {
-            width: 430px;
+            width: 100vw;
             height: 500px;
           }
 
           .swiper-slide-custom {
-            width: 400px;
+            margin: 0 auto;
             height: 455px;
           }
         }
 
         @media (max-width: 450px) {
           .swiper-custom {
-            width: 400px;
+            width: 100vw;
             height: 470px;
           }
 
           .swiper-slide-custom {
-            width: 370px;
+            margin: 0 auto;
             height: 425px;
           }
         }
 
         @media (max-width: 420px) {
           .swiper-custom {
-            width: 370px;
-            height: 440px;
+            margin: 0 auto;
+            height: 460px;
           }
 
           .swiper-slide-custom {
-            width: 340px;
+            margin: 0 auto;
             height: 395px;
           }
         }
