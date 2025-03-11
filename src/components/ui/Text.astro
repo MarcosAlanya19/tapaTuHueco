@@ -13,7 +13,6 @@ const {
 	as = 'p',
 	color = 'black',
 	font = 'Fredoka',
-	size,
 	weight = 'regular',
 	className = '',
 	text
@@ -38,7 +37,7 @@ const colorMap: Record<string, string> = {
   blue: 'var(--color-blue)',
 };
 
-const style = `color: ${colorMap[color]}; font-size: ${size}; font-weight: ${fontWeightMap[weight]}; font-family: ${font}, sans-serif;`;
+const style = `color: ${colorMap[color]}; font-weight: ${fontWeightMap[weight]}; font-family: ${font}, sans-serif;`;
 const classStyle = `inline-block z-5 ${className}`;
 ---
 

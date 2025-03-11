@@ -10,10 +10,10 @@ import {Image} from "astro:assets";
     <article
       class="bg-red rounded-3xl p-10 md:p-14 lg:p-16 md:grid items-center lg:grid-cols-[2fr_2.5fr] gap-8 us-container"
     >
-        <div class="grid gap-[33px] us-text">
+        <div class="grid gap-[33px] max-w-[255px] lg:max-w-[430px] us-text">
             <Text
               as="h2"
-              className="leading-[45px] text-[30px] lg:text-[44px]"
+              className="text-[30px] leading-[32px] lg:text-[44px] lg:leading-[45px]"
               color="white"
               font="LeagueSpartan"
               text="Creemos que cada ciudadano tiene el derecho a vivir en una ciudad segura y limpia"
@@ -21,10 +21,9 @@ import {Image} from "astro:assets";
             />
             <Text
               color="white"
-              size="22px"
               text="Nuestra misión es empoderar a la comunidad para que sea agente de cambio y transforme su entorno."
               weight="light"
-              className="leading-[25px]"
+              className="text-[22px] leading-[25px]"
             />
         </div>
         <Image
