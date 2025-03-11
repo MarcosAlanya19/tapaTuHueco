@@ -31,13 +31,13 @@ import Section from "./ui/Section.astro";
                     className="text-[18px] leading-[20px] max-w-[540px]"
             />
         </div>
-        <div class="relative w-full h-[665px] md:h-[570px] overflow-hidden md:rounded-[30px] md:border-[6px] border-white shadow-[0px_0px_30px_7px_#0000000D]">
+        <div class="relative w-full h-[665px] md:max-h-[570px] overflow-hidden md:rounded-[30px] md:border-[6px] border-white shadow-[0px_0px_30px_7px_#0000000D]">
             <iframe
                     allowfullscreen
                     width="100%"
-                    height="665px"
+                    height="100%"
                     src="https://mrc-fjord.jmaponline.net/services/ng/#ngAnonymous=true&ngProjectId=153"
-                    class="absolute w-[130%] h-[120%] scale-[0.85] md:scale-[1] origin-top-left"
+                    class="absolute w-[130%] h-[120%] md:w-full md:h-full scale-[0.85] md:scale-[1] origin-top-left"
             ></iframe>
         </div>
     </div>
