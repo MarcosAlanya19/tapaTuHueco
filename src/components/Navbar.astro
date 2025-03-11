@@ -3,9 +3,9 @@ import {Image} from 'astro:assets';
 import Text from "./ui/Text.astro";
 ---
 
-<nav class="fixed inset-x-0 top-0 z-20 flex w-full flex-wrap text-sm md:flex-nowrap md:justify-start px-5 py-2 md:px-10 md:py-5 backdrop-blur-md bg-gradient-to-b from-white/70 to-transparent h-[4rem] md:h-[5rem]">
+<nav class="fixed inset-x-0 top-0 z-20 flex w-full flex-wrap text-sm md:flex-nowrap md:justify-start px-5 py-2 md:px-10 md:py-5 backdrop-blur-sm bg-gradient-to-b from-white/70 to-transparent h-[4rem] md:h-[5rem]">
     <div
-      class="h-16 md:max-h-[55px] bg-transparent md:bg-white w-full md:rounded-[32.5px] flex justify-between items-center md:pl-10 md:pr-2.5 md:shadow-lg backdrop-blur-sm"
+      class="h-16 md:max-h-[55px] bg-transparent md:bg-white w-full md:rounded-[32.5px] flex justify-between items-center md:pl-10 md:pr-2.5 md:shadow-lg"
     
     >
         <ul
@@ -125,17 +125,15 @@ import Text from "./ui/Text.astro";
 
 <div
         id="overlay"
-        class="fixed inset-0 bg-red z-30 hidden h-screen w-screen overscroll-y-none transform -translate-y-full transition-transform duration-300 grid grid-rows-[auto_1fr_auto] p-4 md:p-8"
+        class="fixed inset-0 bg-red z-30 hidden h-screen w-screen overscroll-y-none transform -translate-y-full transition-transform duration-300 grid grid-rows-[auto_1fr_auto] p-1.5"
 >
     <div class="flex justify-between w-full pb-5">
-        <Image
-                height={80}
-                width={80}
-                src="/svg/Logo.svg"
-                alt="Nombre del Sitio - Inicio"
-                class="h-[50px] md:h-[80px] w-[50px] md:w-[80px]"
-        />
-        <button id="close-overlay" class="top-4 right-4">
+        <svg xmlns="http://www.w3.org/2000/svg" width="57" height="57" viewBox="0 0 57 57" fill="none">
+            <circle cx="28.5" cy="28.5" r="28.5" fill="#E42521"/>
+            <path d="M44.0696 40.6449C44.0696 41.1193 43.4574 41.5196 42.2709 41.8445C42.1331 41.8807 41.9968 41.9186 41.8458 41.9446C41.4094 42.0433 40.935 42.1434 40.4229 42.2319C39.1871 42.4307 37.7247 42.593 36.0262 42.7177L35.5306 42.7524C34.9526 42.79 34.3612 42.8222 33.7564 42.8489C33.6102 42.8573 33.4643 42.8621 33.3167 42.8687C31.6426 42.9425 29.87 42.9805 27.9595 42.9805C26.1378 42.9805 24.4261 42.9476 22.8095 42.8719C22.6848 42.8672 22.5617 42.8621 22.4385 42.8555C21.9626 42.8328 21.4966 42.8065 21.0371 42.7769L20.1403 42.7171C18.2546 42.5812 16.6561 42.3898 15.3448 42.1428C14.9951 42.0804 14.6588 42.0179 14.347 41.9441C14.2089 41.9064 14.0842 41.8801 13.9584 41.8439C12.7586 41.5051 12.1591 41.1052 12.1597 40.6443C12.1597 40.1209 12.8457 39.6958 14.2821 39.346C14.3936 39.3215 14.5069 39.2952 14.6315 39.2707C15.0058 39.1837 15.4046 39.1081 15.8297 39.0342C16.6093 38.9015 17.4938 38.7897 18.4869 38.6929C18.9891 38.6453 19.5176 38.6011 20.0754 38.5583C20.0886 38.5583 20.1002 38.5583 20.1134 38.555C21.1504 38.483 22.2358 38.422 23.3718 38.3844C24.8703 38.3222 26.4442 38.2974 28.1051 38.2974C29.592 38.2974 31.0017 38.3222 32.3499 38.3598C33.6745 38.4089 34.9348 38.4713 36.1479 38.5583L36.4169 38.5781C36.9865 38.6207 37.527 38.6694 38.0383 38.7242C38.7079 38.793 39.3305 38.8712 39.9061 38.9589C40.5296 39.0459 41.0928 39.1589 41.6049 39.2707C41.7047 39.2952 41.8049 39.3215 41.9038 39.346C43.3459 39.6964 44.0696 40.1215 44.0696 40.6449Z" fill="#242F5F"/>
+            <path d="M28.1157 13.6799C26.4351 13.6788 24.768 13.9783 23.1928 14.5642C17.7977 16.5685 13.9438 21.7685 13.9438 27.8536C13.9456 30.3306 14.5957 32.7641 15.8295 34.912C15.8522 34.9523 15.8735 34.993 15.8983 35.0333L15.9264 35.0776C16.025 35.2429 16.1356 35.4157 16.245 35.59L17.2387 37.1806L19.4033 40.6482L19.5196 40.8315L20.726 42.7656C20.8934 42.7814 21.0623 42.799 21.2315 42.8149C21.6799 42.8588 22.1316 42.8959 22.5947 42.9276C22.7143 42.938 22.8338 42.9452 22.9558 42.9521C23.4861 42.9892 24.0251 43.019 24.5763 43.0418C25.6614 43.0892 26.7905 43.1121 27.9635 43.1105C29.2561 43.1105 30.4856 43.0839 31.6622 43.031C32.1749 43.0083 32.6786 42.9817 33.1751 42.9482C33.318 42.9395 33.4606 42.9324 33.6032 42.9219C34.1915 42.882 34.7662 42.8351 35.3274 42.7811C35.3893 42.7739 35.4509 42.7685 35.5107 42.7617L36.7139 40.8329L38.9894 37.186L39.9863 35.5903C40.1008 35.416 40.2081 35.2432 40.3068 35.0779L40.3334 35.0336C40.3579 34.9933 40.3809 34.9526 40.4021 34.9123C41.4688 33.0555 42.1009 30.9813 42.251 28.8452C42.4012 26.7092 42.0654 24.5669 41.269 22.5792C39.1717 17.37 34.0674 13.6799 28.1157 13.6799ZM34.7613 31.1897C34.2031 32.3018 33.3748 33.2563 32.3523 33.9655C31.3298 34.6748 30.1457 35.1162 28.9084 35.2495C28.645 35.2763 28.3804 35.2899 28.1157 35.2901C26.4953 35.2912 24.9189 34.7635 23.6257 33.7872C22.3325 32.8108 21.3933 31.4392 20.9505 29.8805C20.5078 28.3218 20.5858 26.6612 21.1726 25.1508C21.7595 23.6405 22.8232 22.3629 24.2021 21.512C25.5811 20.6612 27.2001 20.2836 28.8132 20.4365C30.4263 20.5894 31.9455 21.2645 33.14 22.3593C34.3346 23.4541 35.1392 24.9088 35.4318 26.5025C35.7244 28.0963 35.489 29.7419 34.7613 31.1897Z" fill="white"/>
+        </svg>
+        <button id="close-overlay" class="top-4 right-4 pr-5">
             <svg
                     width="24"
                     height="21"
@@ -160,17 +158,17 @@ import Text from "./ui/Text.astro";
     </div>
 
     <!-- Menú de navegación -->
-    <div class="flex flex-col items-center justify-start pr-3 flex-1">
-        <ul class="text-2xl w-full space-y-6">
+    <div class="flex flex-col items-center justify-start pr-8">
+        <ul class="w-full grid gap-[16px]">
             <a href="#header" class="hover:underline block text-right">
                 <li>
                     <Text
                             as="span"
                             color="white"
                             font="Fredoka"
-                            size="2.5rem"
                             text="Inicio"
                             weight="medium"
+                            className="text-[40px]"
                     />
                 </li>
             </a>
@@ -180,9 +178,9 @@ import Text from "./ui/Text.astro";
                             as="span"
                             color="white"
                             font="Fredoka"
-                            size="2.5rem"
                             text="Nosotros"
                             weight="medium"
+                            className="text-[40px]"
                     />
                 </li>
             </a>
@@ -192,16 +190,15 @@ import Text from "./ui/Text.astro";
                             as="span"
                             color="white"
                             font="Fredoka"
-                            size="2.5rem"
                             text="Mapa"
                             weight="medium"
+                            className="text-[40px]"
                     />
                 </li>
             </a>
         </ul>
     </div>
 
-    <!-- Sección de descargas -->
     <div class="flex flex-col justify-end items-center gap-4 pb-6">
         <Image
                 width={180}
@@ -219,7 +216,6 @@ import Text from "./ui/Text.astro";
                 loading="lazy"
                 src="/svg/AppStore.svg"
         />
-        <div class="border-b-4 rounded-xl w-[100px] mt-10"/>
     </div>
 </div>
 
