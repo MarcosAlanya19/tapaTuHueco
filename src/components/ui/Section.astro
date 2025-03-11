@@ -1,0 +1,15 @@
+---
+interface Props {
+	id?: string;
+	className?: string;
+}
+
+const { id, className } = Astro.props as Props;
+---
+
+<section
+        id={id}
+        class={`grid items-center justify-items-center p-[12px] md:p-16 my-20 min-h-screen ${className ?? ""}`}
+>
+	<slot />
+</section>

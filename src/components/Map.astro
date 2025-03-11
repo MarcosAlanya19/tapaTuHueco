@@ -1,17 +1,18 @@
 ---
 import Text from "./ui/Text.astro";
 import Slider from "../react/Slider";
+import Section from "./ui/Section.astro";
 ---
 
-<section
+<Section
         id="map"
-        class="grid  md:flex md:items-center h-screen my-7 md:p-16 scroll-mt-10 lg:scroll-mt-7"
+        className="scroll-mt-10 lg:scroll-mt-7"
 >
     <div
-            class="grid grid-rows-[.3fr_1fr] md:grid-rows-1 w-full"
+            class="grid grid-rows-[.3fr_auto] md:grid-rows-1"
     >
         <div
-                class="p-7 flex flex-col gap-4 justify-end"
+                class="p-7 flex flex-col gap-4"
         >
             <Text
                     as="h2"
@@ -30,18 +31,29 @@ import Slider from "../react/Slider";
                     className="text-[18px] leading-[20px] max-w-[540px]"
             />
         </div>
-        <div
-                class="h-full md:min-h-[35.625rem] bg-gray-1 md:rounded-[30px] flex items-center justify-center"
-        >
-            Mapa
+        <div class="relative w-full h-[665px] md:h-[570px] overflow-hidden md:rounded-[30px] md:border-[6px] border-white shadow-[0px_0px_30px_7px_#0000000D]">
+            <iframe
+                    allowfullscreen
+                    width="100%"
+                    height="665px"
+                    src="https://mrc-fjord.jmaponline.net/services/ng/#ngAnonymous=true&ngProjectId=153"
+                    class="absolute w-[130%] h-[120%] scale-[0.85] md:scale-[1] origin-top-left"
+            ></iframe>
         </div>
     </div>
-</section>
+</Section>
 
 <style is:inline>
-    @media (max-width: 1024px) and (orientation: landscape) {
-        #map {
-            height: 100%;
-        }
+  #map {
+    padding: 0;
+    @media (width >= 48rem ) {  justify-items: stretch;
+      padding: 64px;
     }
+  }
+
+  @media (max-width: 1024px) and (orientation: landscape) {
+    #map {
+      height: 100%;
+    }
+  }
 </style>

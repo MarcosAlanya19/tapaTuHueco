@@ -1,16 +1,17 @@
 ---
+import Section from "./ui/Section.astro";
 import Text from "./ui/Text.astro";
 import {Image} from "astro:assets";
 ---
 
-<section
+<Section
   id="us"
-  class="grid items-center justify-items-center p-3 my-16 md:p-16 h-screen scroll-mt-10"
+  className="scroll-mt-10"
 >
     <article
-      class="bg-red rounded-3xl p-10 md:p-14 lg:p-16 md:grid items-center lg:grid-cols-[2fr_2.5fr] gap-8 us-container"
+      class="bg-red overflow-hidden md:px-20 md:py-16 flex flex-col md:flex-row justify-between gap-8 md:gap-12 md:h-[440px] rounded-[30px] md:grid md:items-center lg:grid-cols-[1fr_1fr] us-container"
     >
-        <div class="grid gap-[33px] max-w-[255px] lg:max-w-[430px] us-text">
+        <div class="grid gap-[33px] pb-0 px-12 py-12 md:px-0 md:py-0 md:max-w-[255px] lg:max-w-[430px] us-text">
             <Text
               as="h2"
               className="text-[30px] leading-[32px] lg:text-[44px] lg:leading-[45px]"
@@ -26,38 +27,40 @@ import {Image} from "astro:assets";
               className="text-[22px] leading-[25px]"
             />
         </div>
-        <Image
-          width={100}
-          height={100}
-          src={"/gif/test.gif"}
-          alt={"Persona caminando"}
-          class="pointer-events-none mix-blend-normal us-image w-full"
-        />
+        <video
+          autoplay
+          muted
+          playsinline
+          class="w-[427px] h-[324px] pb-6 md:pb-0 object-contain us-video"
+        >
+            <source src="/videos/UsAnimated.mp4" type="video/mp4" />.
+        </video>
+
     </article>
-</section>
+</Section>
 
 
 
 <style is:inline>
-    
+
     @media (max-width: 1024px) and (orientation: landscape) {
         #us {
             height: auto;
             padding: 3rem 2rem;
         }
-        
+
         .us-container {
             display: flex;
             flex-direction: row;
             align-items: center;
             gap: 2rem;
         }
-        
+
         .us-text {
             flex: 1;
             text-align: left;
         }
-        
+
         .us-image {
             flex: 1;
             max-width: 50%;

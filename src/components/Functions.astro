@@ -1,11 +1,11 @@
 ---
 import Text from "./ui/Text.astro";
 import Slider from "../react/Slider";
+import Section from "./ui/Section.astro";
 ---
 
-<section
+<Section
         id="functions"
-        class="flex justify-center items-center h-screen p-3 md:p-16"
 >
     <article
             class="grid lg:grid-cols-[1fr_.7fr] lg:justify-items-center items-center relative"
@@ -13,7 +13,7 @@ import Slider from "../react/Slider";
         <div
                 class="bg-gray-1 md:mx-7 rounded-[1.875rem] p-11 grid lg:w-[34.625rem] lg:grid-cols-[2fr_1fr] h-fit relative z-0"
         >
-            <div class="grid">
+            <div class="grid gap-[21px]">
                 <Text
                   as="h2"
                   color="blue"
@@ -40,7 +40,7 @@ import Slider from "../react/Slider";
             />
         </div>
     </article>
-</section>
+</Section>
 
 <style is:inline>
     @media (max-width: 1024px) and (orientation: landscape) {

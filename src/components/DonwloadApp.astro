@@ -1,17 +1,15 @@
 ---
 import {Image} from 'astro:assets';
 import Text from "./ui/Text.astro";
+import Section from './ui/Section.astro';
 ---
 
-<section
+<Section
         id="donwloadApp"
-        class="grid content-center gap-10 items-center justify-items-center h-screen scroll-mt-6 lg:scroll-mt-20"
+        className="gap-11 scroll-mt-32"
 >
-    <div
-            class="grid justify-items-center gap-11 px-10"
-    >
         <div
-                class="grid text-center w-[18.75rem] md:w-full gap-5"
+                class="grid text-center w-[18.75rem] md:w-full gap-11"
         >
             <Text
                     as="h2"
@@ -19,7 +17,7 @@ import Text from "./ui/Text.astro";
                     font="LeagueSpartan"
                     text="Construyamos juntos el Perú que queremos"
                     weight="bold"
-                    className="text-[32px] leading-[34px] lg:text-[36px] leading-[100%]"
+                    className="text-[32px] leading-[34px] lg:text-[36px] lg:leading-[100%]"
             />
             <div
                     class="grid"
@@ -38,37 +36,46 @@ import Text from "./ui/Text.astro";
                 />
             </div>
         </div>
+
         <div
-                class="flex flex-col sm:flex-row justify-center gap-8"
+                class="flex items-center gap-8 flex-col md:flex-row"
         >
             <Image
                     width={180}
                     height={60}
                     alt="GooglePlay"
-                    class="cursor-pointer"
                     src="/svg/GooglePlay.svg"
                     loading="lazy"
+                    class=" cursor-pointer shrink-0"
             />
             <Image
                     width={180}
                     height={60}
                     alt="AppStore"
-                    class="cursor-pointer"
-                    loading="lazy"
                     src="/svg/AppStore.svg"
+                    loading="lazy"
+                    class=" cursor-pointer shrink-0"
             />
         </div>
-    </div>
-    <Image
+      <div class="h-full">
+        <Image
             alt="ComputerSet"
-            class="w-auto object-contain h-full lg:h-[90%]"
-            height={100}
             src="/img/ComputerSet.png"
+            height={100}
             width={100}
-    >
-</section>
+            class="h-full w-full object-contain"
+        />
+      </div>
+</Section>
 
 <style is:inline>
+  #donwloadApp {
+    height: 100% !important;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+
   @media (max-width: 1024px) and (orientation: landscape) {
     #donwloadApp {
       height: 100%;

@@ -68,6 +68,7 @@ const Slider = () => {
           width: 480px;
           height: 480px;
           border-radius: 15px;
+          box-shadow: 0px 10px 33px 2px #00000026;
         }
 
         .slide-text {
@@ -75,7 +76,8 @@ const Slider = () => {
           font-family: 'LeagueSpartan', sans-serif;
           font-weight: 300;
           text-align: center;
-          padding: 16px;
+          padding: 30px 50px;
+	        padding-bottom: 12px;
         }
 
         .video-container {
@@ -93,23 +95,28 @@ const Slider = () => {
           position: absolute;
           bottom: -70px;
           width: 100%;
-          height: 100%;
+          height: 115%;
           object-fit: cover;
         }
-        
+
         .swiper-button-prev,
         .swiper-button-next {
+          width: 51px;
+          height: 51px;
           font-size: 28px !important;
-          width: 51px !important;
-          height: 51px !important;
-          color: #242f5f !important;
+          color: #242F5F !important;
           position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
           z-index: 10;
           opacity: 1 !important;
-          transition: opacity 0.3s ease;
-          display: flex !important;
+          transition: all 0.3s ease;
+          border-radius: 50%;
+          background-color: transparent;
+        }
+
+        .swiper-button-prev:hover,
+        .swiper-button-next:hover {
+          background-color: #242F5F;
+          color: #ffffff !important;
         }
 
         .swiper-button-prev::after,
