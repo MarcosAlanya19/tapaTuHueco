@@ -3,7 +3,8 @@ import Text from "./ui/Text.astro";
 ---
 
 <section
-  class="flex flex-col-reverse md:grid md:grid-cols-[1.2fr_1fr] items-center md:h-screen my-16 zycie-container"
+  id="zycie"
+  class="flex flex-col-reverse md:grid md:grid-cols-[1.2fr_1fr] items-center h-auto md:h-screen my-16 zycie-container"
 >  <div class="zycie-bg-image min-h-[410px]">
     <div class="zycie-slide zycie-one md:rounded-tr-[30px] md:rounded-br-[30px]"></div>
     <div class="zycie-slide zycie-two md:rounded-tr-[30px] md:rounded-br-[30px]"></div>
@@ -70,5 +71,11 @@ import Text from "./ui/Text.astro";
     0%, 20% { opacity: 1; }
     40% { opacity: 0; transition: opacity 2s ease-in-out; }
     100% { opacity: 0; }
+  }
+  
+  @media (max-width: 1024px) and (orientation: landscape) {
+    #zycie {
+      height: auto;
+    }
   }
 </style>

@@ -5,26 +5,19 @@ import Text from "./ui/Text.astro";
 
 <header
         id="header"
-        class="relative grid grid-rows-2  lg:grid-rows-1 lg:grid-cols-[1.8fr_1.2fr] bg-gray-1 h-screen lg:h-[115vh] w-full overflow-hidden"
+        class="relative grid lg:grid-cols-[1.8fr_1.2fr] bg-gray-1 h-[105vh] md:h-[110vh] w-full overflow-hidden"
         aria-label="Sección principal de Tapa Tu Hueco"
-        style="clip-path: ellipse(120% 100% at 50% 0%);"
+        style="clip-path: ellipse(150% 100% at 50% 0%);"
 >
     <div
             id="imgHeader"
-            class="absolute lg:-left-20 justify-center lg:min-w-[65%] h-full z-0 pointer-events-none"
-    >
-        <img
-                alt="Fondo decorativo"
-                class="w-full h-full object-cover"
-                src="/img/BgLogo.png"
-        />
-    </div>
+    />
     <div
             id="header-left"
-            class="p-6 px-10 lg:px-16 h-full relative flex w-full md:justify-center z-10"
+            class="p-6 pb-0 px-10 lg:px-16 h-full relative flex w-full md:justify-center z-10"
     >
         <div
-                class="flex flex-col text-center gap-6 items-center justify-end lg:justify-center max-w-[40rem] min-h-[100%] relative z-10 w-full"
+                class="flex flex-col text-center gap-6 items-center justify-end lg:justify-center max-w-[40rem] mt-12 lg:mt-0 md:min-h-[100%] relative z-10 w-full"
         >
             <Text
                     as="h1"
@@ -81,80 +74,80 @@ import Text from "./ui/Text.astro";
         </div>
     </div>
 
-    <div class=" relative flex items-end justify-end lg:justify-center lg:h-full z-10 -bottom-3.5 lg:-bottom-0">
+    <div class="relative flex items-end justify-end lg:justify-center z-10 -right-12 -bottom-3.5 lg:-bottom-0 mt-5">
         <Image
                 width={100}
                 height={100}
                 src={"/gif/HandSmartPhone.gif"}
                 alt={"Mano con Smartphone"}
-                class="w-full object-contain lg:object-cover h-full"
+                class="w-full object-cover h-full md:h-[500px] lg:h-[95vh] md:object-contain lg:object-cover"
         />
     </div>
 </header>
 
 <style is:inline>
-
-  @media (max-width: 1024px) {
-    #header {
-      clip-path: none !important;
-    }
-  }
-
-  video {
-    height: 100%;
-  }
-
-  @media (max-width: 1449px) {
-    img {
-      height: 80%;
-    }
-  }
-
-  @media (max-width: 1320px) {
-    img {
-      height: 70%;
-    }
-  }
-
-  @media (max-width: 1024px) {
-    img {
-      height: 65%;
-    }
-  }
-
-  @media (max-width: 1023px) {
-    img {
-      height: 100%;
-    }
-  }
-
-  @media (min-width: 1450px) {
-    img {
-      height: 90%;
-    }
-  }
-
-  @media (max-width: 1000px) and (orientation: landscape) {
-    img {
-      height: 80%;
-    }
-
-    #header {
-      display: grid;
-      grid-template-rows: 1fr;
-      align-items: center;
-    }
-
-    #header-left {
-      height: 100vh;
-      display: grid;
-      margin-top: 24px;
-      align-content: center;
-      padding-inline: 6px;
-    }
-
+  @media (min-width: 1281px) {
     #imgHeader {
-      display: none;
+      position: absolute;
+      top: -10vh;
+      left: -13vw;
+      width: 162vh;
+      height: 130vh;
+      background: url(/img/BgLogo.png) no-repeat center;
+      background-size: contain;
+      z-index: 0;
+      pointer-events: none;
     }
+  }
+
+  @media (max-width: 1280px) {
+    #imgHeader {
+      position: absolute;
+      top: -10vh;
+      left: -13vw;
+      width: 155vh;
+      height: 125vh;
+      background: url(/img/BgLogo.png) no-repeat center;
+      background-size: contain;
+      z-index: 0;
+      pointer-events: none;
+    }
+  }
+  
+  @media (max-width: 1205px) {
+      #imgHeader {
+          width: 145vh;
+      }
+  }
+  
+  @media (max-width: 1115px) {
+      #imgHeader {
+          width: 135vh;
+      }
+  }
+
+  @media (max-width: 1024px) {
+    #header {
+      clip-path: ellipse(250% 100% at 50% 0%) !important;
+    }
+      
+      #imgHeader {
+          position: absolute;
+          top: 15vh;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 100vh;
+          height: 90vh;
+          background: url(/img/BgLogo.png) no-repeat center;
+          background-size: cover;
+          z-index: 0;
+          pointer-events: none;
+      }
+  }
+  
+  @media (max-width: 1024px) and (orientation: landscape) {
+      #header {
+          height: 100%;
+      }
   }
 </style>
