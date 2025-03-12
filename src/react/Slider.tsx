@@ -3,7 +3,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import 'swiper/css/effect-creative';
+import { Autoplay, Navigation, Pagination, EffectCreative } from "swiper/modules";
 
 const videoData = [
 	{
@@ -32,7 +33,17 @@ const Slider = () => {
 				autoplay={{ delay: 20000, disableOnInteraction: false }}
 				navigation={{ enabled: true }}
 				pagination={{ clickable: true }}
-				modules={[Navigation, Pagination, Autoplay]}
+				effect={'creative'}
+				creativeEffect={{
+					prev: {
+						shadow: false,
+						translate: [0, 0, -400],
+					},
+					next: {
+						translate: ['100%', 0, 0],
+					},
+				}}
+				modules={[Navigation, Pagination, Autoplay, EffectCreative]}
 			>
 				{videoData.map((video, index) => (
 					<SwiperSlide key={index} >
@@ -108,20 +119,34 @@ const Slider = () => {
           position: absolute;
           z-index: 10;
           opacity: 1 !important;
-          transition: all 0.3s ease;
+          transition: background-color 0.3s ease, color 0.3s ease;
           border-radius: 50%;
           background-color: transparent;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          box-sizing: border-box;
+          border: 2px solid transparent;
         }
 
-        .swiper-button-prev:hover,
-        .swiper-button-next:hover {
+        .swiper-button-prev:hover {
           background-color: #242F5F;
           color: #ffffff !important;
         }
 
-        .swiper-button-prev::after,
+        .swiper-button-next:hover {
+          background-color: #242F5F;
+          color: #ffffff !important;
+        }
+        
         .swiper-button-next::after {
           font-size: 28px !important;
+          transform: translateX(2px)
+        }
+
+        .swiper-button-prev::after {
+          font-size: 28px !important;
+          transform: translateX(-2px);
         }
 
         .swiper-pagination-bullet {

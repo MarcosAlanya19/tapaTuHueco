@@ -6,10 +6,10 @@ import Section from './ui/Section.astro';
 
 <Section
         id="donwloadApp"
-        className="gap-11 scroll-mt-32"
+        className="gap-[42px] scroll-mt-32"
 >
         <div
-                class="grid text-center w-[290px] md:w-[18.75rem] md:w-full gap-11"
+                class="grid text-center justify-items-center w-[290px] md:w-[18.75rem] md:w-full gap-[20px]"
         >
             <Text
                     as="h2"
@@ -22,27 +22,21 @@ import Section from './ui/Section.astro';
             <div
                     class="grid"
             >
-                <Text
-                        color="gray-dark"
-                        text="Descarga Tapa tu Hueco y sé parte del cambio."
-                        weight="light"
-                        className="text-[18px] leading-[20px] lg:text-[20px] lg:leading-[100%]"
-                />
-                <Text
-                        color="gray-dark"
-                        text="Tu ciudad te necesita."
-                        weight="light"
-                        className="text-[18px] leading-[20px] lg:text-[20px] lg:leading-[100%]"
-                />
+              <Text
+                color="gray-dark"
+                text={`Descarga Tapa tu Hueco y sé parte del cambio.\nTu ciudad te necesita.`}
+                weight="light"
+                className="text-[18px] leading-[20px] lg:text-[20px] lg:leading-[24px] w-[200px] md:w-[430px]"
+              />
             </div>
         </div>
 
         <div
-                class="flex items-center gap-8 flex-col md:flex-row"
+                class="flex items-center gap-8 flex-col md:flex-row mt-[34px] md:mt-0"
         >
             <Image
                     width={180}
-                    height={60}
+                    height={61}
                     alt="GooglePlay"
                     src="/svg/GooglePlay.svg"
                     loading="lazy"
@@ -50,7 +44,7 @@ import Section from './ui/Section.astro';
             />
             <Image
                     width={180}
-                    height={60}
+                    height={61}
                     alt="AppStore"
                     src="/svg/AppStore.svg"
                     loading="lazy"
