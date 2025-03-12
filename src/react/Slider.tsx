@@ -34,10 +34,11 @@ const Slider = () => {
 				navigation={{ enabled: true }}
 				pagination={{ clickable: true }}
 				effect={'creative'}
+				speed={1100}
 				creativeEffect={{
 					prev: {
 						shadow: false,
-						translate: [0, 0, -400],
+						translate: [0, 0, -500],
 					},
 					next: {
 						translate: ['100%', 0, 0],
