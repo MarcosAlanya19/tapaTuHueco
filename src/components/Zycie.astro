@@ -1,43 +1,42 @@
 ---
 import Text from "./ui/Text.astro";
+import ImageSlider from "@react/ImageZycieSlider";
 ---
 
 <section
-  id="zycie"
-  class="flex flex-col-reverse md:grid md:grid-cols-[1.1fr_1fr] items-center h-auto md:h-screen my-16 zycie-container"
->  <div class="zycie-bg-image min-h-[410px]">
-    <div class="zycie-slide zycie-one md:rounded-tr-[25px] md:rounded-br-[25px]"></div>
-    <div class="zycie-slide zycie-two md:rounded-tr-[25px] md:rounded-br-[25px]"></div>
-    <div class="zycie-slide zycie-three md:rounded-tr-[25px] md:rounded-br-[25px]"></div>
-    <div class="zycie-slide zycie-four md:rounded-tr-[25px] md:rounded-br-[25px]"></div>
-    <div class="zycie-slide zycie-five md:rounded-tr-[25px] md:rounded-br-[25px]"></div>
-    <div class="zycie-slide zycie-six md:rounded-tr-[25px] md:rounded-br-[25px]"></div>
-  </div>
+        id="zycie"
+        class="flex flex-col-reverse md:grid md:grid-cols-[1.1fr_1fr] items-center h-auto md:h-screen my-16 zycie-container"
+>
+    <div class="zycie-bg-image min-h-[410px]">
+        <ImageSlider client:load />
+        
+    </div>
 
-  <div class="grid items-center pb-[45px] p-[35px] md:pb-[60px] md:p-[60px] lg:p-[90px] gap-[45px] md:gap-[24px] zycie-text">
-    <a href="https://www.zycie.org/" target="_blank" class="w-fit">
-      <svg xmlns="http://www.w3.org/2000/svg" width="81" height="26" viewBox="0 0 81 26" fill="none">
-        <path d="M0 25.7691V23.8069L13.2623 6.9545L13.5721 8.07991H0.197105V5.56937H16.1063V7.53163L2.90026 24.384L2.56236 23.2586H16.4723V25.7691H0ZM8.25025 3.40511C7.78094 3.40511 7.38673 3.24158 7.06762 2.91454C6.74851 2.58749 6.58894 2.1835 6.58894 1.70255C6.58894 1.22161 6.74851 0.81761 7.06762 0.490568C7.38673 0.163521 7.78094 0 8.25025 0C8.71956 0 9.11377 0.163521 9.43288 0.490568C9.75198 0.81761 9.91156 1.22161 9.91156 1.70255C9.91156 2.1835 9.75198 2.58749 9.43288 2.91454C9.11377 3.24158 8.71956 3.40511 8.25025 3.40511ZM25.0105 25.7691V18.0355L25.6582 19.8246L17.1827 5.56937H20.1956L27.3195 17.6027H25.6863L32.8384 5.56937H35.6261L27.1787 19.8246L27.7982 18.0355V25.7691H25.0105ZM46.4442 26C44.9421 26 43.5531 25.7499 42.2766 25.2497C41.0189 24.7303 39.9207 24.0089 38.9821 23.0855C38.0623 22.1428 37.3396 21.0462 36.814 19.7958C36.2883 18.5453 36.0255 17.1698 36.0255 15.6693C36.0255 14.1687 36.2883 12.7932 36.814 11.5427C37.3396 10.2923 38.0717 9.20533 39.0103 8.28191C39.9489 7.33924 41.047 6.61782 42.3047 6.11765C43.5812 5.59823 44.9703 5.33851 46.4723 5.33851C47.9928 5.33851 49.3911 5.60783 50.6678 6.1465C51.9631 6.66593 53.0613 7.44506 53.9623 8.48391L52.132 10.3019C51.381 9.4939 50.5363 8.89751 49.5978 8.51276C48.659 8.10877 47.655 7.90677 46.585 7.90677C45.4771 7.90677 44.445 8.09916 43.4874 8.48391C42.5488 8.86865 41.7322 9.40733 41.0376 10.0999C40.3431 10.7925 39.7987 11.6197 39.4045 12.5816C39.0291 13.5242 38.8413 14.5534 38.8413 15.6693C38.8413 16.7851 39.0291 17.8239 39.4045 18.7858C39.7987 19.7285 40.3431 20.5461 41.0376 21.2386C41.7322 21.9312 42.5488 22.4699 43.4874 22.8546C44.445 23.2393 45.4771 23.4317 46.585 23.4317C47.655 23.4317 48.659 23.2393 49.5978 22.8546C50.5363 22.4506 51.381 21.835 52.132 21.0078L53.9623 22.8257C53.0613 23.8646 51.9631 24.6533 50.6678 25.192C49.3911 25.7307 47.9832 26 46.4442 26ZM57.9792 25.7691V5.56937H60.795V25.7691H57.9792ZM69.2582 14.2841H79.395V16.737H69.2582V14.2841ZM69.5116 23.2586H81V25.7691H66.6958V5.56937H80.6058V8.07991H69.5116V23.2586Z" fill="#1E1E1E"/>
-      </svg>
-    </a>
+    <div class="grid items-center pb-[45px] p-[35px] md:pb-[60px] md:p-[60px] lg:p-[90px] gap-[45px] md:gap-[24px] zycie-text">
+        <a href="https://www.zycie.org/" target="_blank" class="w-fit">
+            <svg xmlns="http://www.w3.org/2000/svg" width="81" height="26" viewBox="0 0 81 26" fill="none">
+                <path d="M0 25.7691V23.8069L13.2623 6.9545L13.5721 8.07991H0.197105V5.56937H16.1063V7.53163L2.90026 24.384L2.56236 23.2586H16.4723V25.7691H0ZM8.25025 3.40511C7.78094 3.40511 7.38673 3.24158 7.06762 2.91454C6.74851 2.58749 6.58894 2.1835 6.58894 1.70255C6.58894 1.22161 6.74851 0.81761 7.06762 0.490568C7.38673 0.163521 7.78094 0 8.25025 0C8.71956 0 9.11377 0.163521 9.43288 0.490568C9.75198 0.81761 9.91156 1.22161 9.91156 1.70255C9.91156 2.1835 9.75198 2.58749 9.43288 2.91454C9.11377 3.24158 8.71956 3.40511 8.25025 3.40511ZM25.0105 25.7691V18.0355L25.6582 19.8246L17.1827 5.56937H20.1956L27.3195 17.6027H25.6863L32.8384 5.56937H35.6261L27.1787 19.8246L27.7982 18.0355V25.7691H25.0105ZM46.4442 26C44.9421 26 43.5531 25.7499 42.2766 25.2497C41.0189 24.7303 39.9207 24.0089 38.9821 23.0855C38.0623 22.1428 37.3396 21.0462 36.814 19.7958C36.2883 18.5453 36.0255 17.1698 36.0255 15.6693C36.0255 14.1687 36.2883 12.7932 36.814 11.5427C37.3396 10.2923 38.0717 9.20533 39.0103 8.28191C39.9489 7.33924 41.047 6.61782 42.3047 6.11765C43.5812 5.59823 44.9703 5.33851 46.4723 5.33851C47.9928 5.33851 49.3911 5.60783 50.6678 6.1465C51.9631 6.66593 53.0613 7.44506 53.9623 8.48391L52.132 10.3019C51.381 9.4939 50.5363 8.89751 49.5978 8.51276C48.659 8.10877 47.655 7.90677 46.585 7.90677C45.4771 7.90677 44.445 8.09916 43.4874 8.48391C42.5488 8.86865 41.7322 9.40733 41.0376 10.0999C40.3431 10.7925 39.7987 11.6197 39.4045 12.5816C39.0291 13.5242 38.8413 14.5534 38.8413 15.6693C38.8413 16.7851 39.0291 17.8239 39.4045 18.7858C39.7987 19.7285 40.3431 20.5461 41.0376 21.2386C41.7322 21.9312 42.5488 22.4699 43.4874 22.8546C44.445 23.2393 45.4771 23.4317 46.585 23.4317C47.655 23.4317 48.659 23.2393 49.5978 22.8546C50.5363 22.4506 51.381 21.835 52.132 21.0078L53.9623 22.8257C53.0613 23.8646 51.9631 24.6533 50.6678 25.192C49.3911 25.7307 47.9832 26 46.4442 26ZM57.9792 25.7691V5.56937H60.795V25.7691H57.9792ZM69.2582 14.2841H79.395V16.737H69.2582V14.2841ZM69.5116 23.2586H81V25.7691H66.6958V5.56937H80.6058V8.07991H69.5116V23.2586Z"
+                      fill="#1E1E1E"/>
+            </svg>
+        </a>
 
-    <Text
-      as="h2"
-      color="gray-dark"
-      font="LeagueSpartan"
-      text="¿Te imaginas una ciudad donde todos nos cuidamos y nos apoyamos?"
-      weight="semiBold"
-      className="text-[30px] leading-[34px] lg:text-[44px] lg:leading-[44px] max-w-[555px]"
-    />
-    <Text
-      as="p"
-      color="gray-dark"
-      font="LeagueSpartan"
-      text="Somos ŻYCIE, una organización sin fines de lucro. Creemos firmemente en la fuerza de la comunidad. Por eso, con mucho cariño, creamos Tapa tu Hueco. Una app para que juntos transformemos nuestras calles y barrios en espacios que nos llenen de orgullo. Únete a esta gran familia y sé parte del cambio, ¡tu participación es clave!"
-      weight="regular"
-      className="text-[18px] leading-[20px] lg:text-[20px] lg:leading-[25px] max-w-[555px]"
-    />
-  </div>
+        <Text
+                as="h2"
+                color="gray-dark"
+                font="LeagueSpartan"
+                text="¿Te imaginas una ciudad donde todos nos cuidamos y nos apoyamos?"
+                weight="semiBold"
+                className="text-[30px] leading-[34px] lg:text-[44px] lg:leading-[44px] max-w-[555px]"
+        />
+        <Text
+                as="p"
+                color="gray-dark"
+                font="LeagueSpartan"
+                text="Somos ŻYCIE, una organización sin fines de lucro. Creemos firmemente en la fuerza de la comunidad. Por eso, con mucho cariño, creamos Tapa tu Hueco. Una app para que juntos transformemos nuestras calles y barrios en espacios que nos llenen de orgullo. Únete a esta gran familia y sé parte del cambio, ¡tu participación es clave!"
+                weight="regular"
+                className="text-[18px] leading-[20px] lg:text-[20px] lg:leading-[25px] max-w-[555px]"
+        />
+    </div>
 </section>
 
 <style is:inline>
@@ -48,31 +47,6 @@ import Text from "./ui/Text.astro";
     overflow: hidden;
   }
 
-  .zycie-slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    opacity: 0;
-    animation: zycie-fade 36s infinite;
-  }
-
-  .zycie-one { background-image: url('/img/ZycieOne.png'); animation-delay: 0s; }
-  .zycie-two { background-image: url('/img/ZycieTwo.png'); animation-delay: 6s; }
-  .zycie-three { background-image: url('/img/ZycieThree.png'); animation-delay: 12s; }
-  .zycie-four { background-image: url('/img/ZycieFour.png'); animation-delay: 18s; }
-  .zycie-five { background-image: url('/img/ZycieFive.png'); animation-delay: 24s; }
-  .zycie-six { background-image: url('/img/ZycieSix.png'); animation-delay: 30s; }
-
-  @keyframes zycie-fade {
-    0%, 20% { opacity: 1; }
-    40% { opacity: 0; transition: opacity 2s ease-in-out; }
-    100% { opacity: 0; }
-  }
-  
   @media (max-width: 1024px) and (orientation: landscape) {
     #zycie {
       height: auto;

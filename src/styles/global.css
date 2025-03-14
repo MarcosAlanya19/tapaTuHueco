@@ -11,3 +11,32 @@
   --color-red: #E42521;         /* Rojo */
   --color-blue: #242F5F;        /* Azul */
 }
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-gray-1);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-red);
+  border-radius: 50px;
+  border: 3px solid var(--color-gray-1);
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  min-height: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c51d1a;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-red) var(--color-gray-1);
+}
+

@@ -1,6 +1,6 @@
 ---
 import Text from "./ui/Text.astro";
-import Slider from "../react/Slider";
+import VideoFunctionsSlider from "@react/VideoFunctionsSlider";
 import Section from "./ui/Section.astro";
 ---
 
@@ -36,7 +36,7 @@ import Section from "./ui/Section.astro";
         <div
                 class="lg:absolute lg:top-1/2 lg:-translate-y-1/2 lg:right-[-30px] z-10"
         >
-            <Slider
+            <VideoFunctionsSlider
               client:idle
             />
         </div>
@@ -49,5 +49,4 @@ import Section from "./ui/Section.astro";
             height: 100%;
         }
     }
-
 </style>

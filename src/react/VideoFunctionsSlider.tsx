@@ -21,7 +21,7 @@ const videoData = [
 	},
 ];
 
-const Slider = () => {
+const VideoFunctionsSlider = () => {
 	return (
 		<div className="slider-container">
 			<Swiper
@@ -227,4 +227,4 @@ const Slider = () => {
 	);
 };
 
-export default Slider;
+export default VideoFunctionsSlider;

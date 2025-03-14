@@ -8,15 +8,26 @@ import Layout from '../layouts/Layout.astro';
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 import Zycie from "../components/Zycie.astro";
+import FadeInSection from "../components/ui/FadeInSection.astro";
 ---
 
 <Layout>
-    <Navbar />
+    <Navbar/>
     <Header/>
-    <Us/>
-    <Zycie />
-    <Map />
-    <Functions/>
-    <DonwloadApp/>
-    <Footer />
+    <FadeInSection>
+        <Us/>
+    </FadeInSection>
+    <FadeInSection>
+        <Zycie/>
+    </FadeInSection>
+    <FadeInSection>
+        <Map/>
+    </FadeInSection>
+    <FadeInSection>
+        <Functions/>
+    </FadeInSection>
+    <FadeInSection>
+        <DonwloadApp/>
+    </FadeInSection>
+    <Footer/>
 </Layout>
