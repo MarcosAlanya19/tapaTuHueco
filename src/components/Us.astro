@@ -9,7 +9,7 @@ import {Image} from "astro:assets";
   className="scroll-mt-10"
 >
     <article
-      class="bg-[#CD2321] overflow-hidden md:px-20 md:py-16 flex flex-col md:flex-row justify-between gap-8 md:gap-12 md:h-[440px] rounded-[30px] md:grid md:items-center lg:grid-cols-[1fr_1fr] us-container"
+      class="bg-red overflow-hidden md:px-20 md:py-16 flex flex-col md:flex-row justify-between gap-8 md:gap-12 md:h-[440px] rounded-[30px] md:grid md:items-center lg:grid-cols-[1fr_1fr] us-container"
     >
         <div class="grid gap-[33px] pb-0 px-12 py-12 md:px-0 md:py-0 md:max-w-[255px] lg:max-w-[430px] us-text">
             <Text
@@ -27,15 +27,11 @@ import {Image} from "astro:assets";
               className="text-[22px] leading-[25px]"
             />
         </div>
-        <video
-          autoplay
-          muted
-          playsinline
-          class="w-[427px] h-[324px] pb-6 md:pb-0 object-contain us-video"
-        >
-            <source src="/videos/UsAnimated.mp4" type="video/mp4" />
+        <video autoplay muted playsinline
+               class="w-[427px] h-[324px] pb-6 md:pb-0 object-contain us-video">
+            <source src="/videos/UsAnimated.webm" type="video/webm">
+            Tu navegador no soporta la reproducción de video.
         </video>
-
     </article>
 </Section>
 
