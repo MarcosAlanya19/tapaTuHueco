@@ -1,48 +1,47 @@
-# Astro Starter Kit: Basics
+# 🚨 NO ELIMINAR - Proyecto Publicado: TapaTuHueco 🚨
 
-```sh
-npm create astro@latest -- --template basics
-```
+## Introducción
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+Este documento describe el desarrollo de una landing page para **TapaTuHueco**, una plataforma que permite a los usuarios reportar lugares con baches para su posterior reparación. A continuación se detallan los aspectos técnicos, la arquitectura, las dependencias y las configuraciones utilizadas en el proyecto.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Tecnologías Utilizadas
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+- **Framework**: Astro
+- **Lenguajes**: HTML, CSS, TypeScript
+- **Estilos**: TailwindCSS
+- **Islas de Interactividad**: React
+- **Librerías Adicionales**: Swiper (para carruseles y sliders)
 
-## 🚀 Project Structure
+## Estructura del Proyecto
 
-Inside of your Astro project, you'll see the following folders and files:
+- **Navbar**: Barra de navegación con acceso a las principales secciones del sitio.
+- **Cabecera**: Sección de bienvenida con una imagen destacada y un mensaje introductorio.
+- **Nosotros**: Explicación sobre el propósito de la plataforma y cómo funciona.
+- **Zycie**: Información sobre el impacto de los baches en la comunidad y la importancia de reportarlos.
+- **Mapa Interactivo**: Muestra los baches reportados por los usuarios con sus respectivas ubicaciones.
+- **Funcionalidades**: Explicación de las principales herramientas y características de la plataforma.
+- **Descarga la App**: Sección con enlaces para descargar la aplicación en dispositivos móviles.
+- **Footer**: Información de contacto y enlaces relevantes.
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## Uso de React en una Isla
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+Se implementó una isla de React para mejorar la interactividad en la sección del mapa y el carrusel.
 
-## 🧞 Commands
+**Razón de su implementación**: React permite manejar eventos y actualizaciones de estado de manera eficiente en componentes específicos sin afectar el rendimiento global de la página estática generada por Astro. Esto es crucial en elementos dinámicos como el slider y el mapa interactivo.
 
-All commands are run from the root of the project, from a terminal:
+## Configuración de SEO
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+Para mejorar la visibilidad de la landing page en motores de búsqueda y redes sociales, se implementaron las siguientes estrategias:
 
-## 👀 Want to learn more?
+- **Metadatos esenciales**: Se agregaron etiquetas `<meta>`, `<title>`, y `<description>` con información relevante sobre la plataforma.
+- **Optimización geográfica**: Se incluyeron metadatos de geolocalización para mejorar la visibilidad en búsquedas locales.
+- **Optimización para redes sociales**: Se implementaron etiquetas Open Graph para Facebook y Twitter para mejorar la visualización cuando se comparte la página.
+- **Favicon e íconos**: Se establecieron iconos personalizados para fortalecer la identidad visual.
+- **Uso de etiquetas accesibles**: Se incluyeron etiquetas `aria` para mejorar la accesibilidad y optimización en buscadores.
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## Consideraciones Finales
+
+- Asegurar que los estilos sean responsivos.
+- Optimizar imágenes y assets estáticos.
+- Implementar validación en el formulario de reporte de baches.
+- Cumplir con buenas prácticas de SEO.
